@@ -1,0 +1,174 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-index-3);
+    width: 100%;
+    padding: clamp(18px, 2vw, 30px) 0;
+    background-color: var(--base-color-white);
+    box-shadow: 0 15px 25px rgba(212, 205, 197, 0.7);
+
+    > .container {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: clamp(14px, 1.5vw, 20px);
+    }
+
+    &__logos {
+        display: grid;
+        grid-template-columns: minmax(0, 239.5fr) minmax(0, 244fr) minmax(0, 231fr) minmax(0, 150fr);
+        align-items: center;
+        gap: clamp(18px, 3vw, 48px);
+        width: 100%;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+
+        &:last-child {
+            justify-content: flex-end;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        &--tarhan {
+            max-width: 239.5px;
+        }
+
+        &--kfu {
+            max-width: 244px;
+        }
+
+        &--mincult {
+            max-width: 231px;
+        }
+
+        &--alien {
+            max-width: 150px;
+        }
+    }
+
+    &__titles {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(12px, 2vw, 28px);
+        width: 100%;
+    }
+
+    &__title {
+        min-width: 0;
+
+        &-a {
+            display: block;
+            color: var(--base-color-black);
+            font-size: clamp(17px, 1.65vw, 24px);
+            font-weight: 700;
+            line-height: 1.25;
+            white-space: nowrap;
+            transition: color var(--transition);
+
+            &:hover {
+                color: var(--base-color-80);
+            }
+        }
+    }
+
+    @include tablet {
+        &__logos {
+            gap: clamp(14px, 2.5vw, 26px);
+        }
+
+        &__titles {
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: clamp(18px, 4vw, 36px);
+            row-gap: 10px;
+        }
+
+        &__title-a {
+            font-size: 18px;
+        }
+    }
+
+    @include small-tablet {
+        position: relative;
+
+        &__logos {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: clamp(24px, 8vw, 56px);
+            row-gap: 14px;
+        }
+
+        &__logo {
+            justify-content: center;
+
+            &:last-child {
+                justify-content: center;
+            }
+
+            img {
+                max-height: 54px;
+            }
+
+            &--alien {
+                justify-self: center;
+            }
+        }
+
+        &__titles {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px 14px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__title-a {
+            font-size: 16px;
+            white-space: normal;
+        }
+    }
+
+    @include mobile {
+        padding: 16px 0;
+
+        &__container {
+            gap: 16px;
+        }
+
+        &__logos {
+            column-gap: 24px;
+            row-gap: 12px;
+        }
+
+        &__logo img {
+            max-width: 160px;
+            max-height: 44px;
+        }
+
+        &__titles {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px 12px;
+        }
+
+        &__title-a {
+            padding: 3px;
+            font-size: 15px;
+        }
+    }
+}

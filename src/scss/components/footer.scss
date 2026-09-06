@@ -1,0 +1,210 @@
+.footer {
+    width: 100%;
+    background-color: var(--base-color-white);
+    padding: clamp(20px, 3vw, 36px) 0 clamp(18px, 2.5vw, 28px);
+
+    &__details {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 385px;
+        width: 100%;
+        max-height: none;
+
+    }
+
+    &__container {
+        @include flex-column-space-between;
+        background-color: transparent;
+        max-height: none;
+        gap: clamp(18px, 2.5vw, 24px);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 520px;
+    }
+
+    &__general {
+        @include flex-row-space-between
+    }
+
+    &__brand {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 0 0 0;
+
+
+
+        &--logo {
+            width: clamp(160px, 16vw, 220px);
+            max-width: 100%;
+
+        }
+
+        &--text {
+            font-size: clamp(10px, 0.8vw, 12px);
+            line-height: 1.5;
+            font-weight: 900;
+
+        }
+    }
+
+    &__line {
+        height: 100%;
+        height: clamp(52px, 6vw, 72px);
+        width: 1px;
+        background-color: var(--base-color-80);
+        
+    }
+
+    &__description {
+        max-width: 250px;
+        font-size: clamp(12px, 1vw, 14px);
+        line-height: 1.5;
+        font-weight: 900;
+
+    }
+
+
+
+
+
+    &__nav {
+        @include flex-row-space-between;
+
+        &--box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 200px;
+
+
+        }
+
+        &--title {
+            display: block;
+            font-size: clamp(14px, 1.3vw, 18px);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--base-color-80)
+        }
+
+        &--ul {
+            @include flex-column-space-between;
+
+        }
+
+        &--li {
+            line-height: 1.7;
+            font-weight: 700;
+        }
+    }
+
+
+
+
+
+
+    &__contacts {
+
+        &--ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            gap: 0;
+        }
+
+        &--li {
+            display: block;
+        }
+
+        &--title {
+            display: block;
+            font-size: clamp(14px, 1.3vw, 18px);
+            font-weight: 700;
+            line-height: 1.5;
+            color: var(--base-color-80)
+        }
+    }
+
+    &__link {
+        color: var(--base-color-black);
+        line-height: 1.5;
+
+    }
+
+    &__socials {
+        max-width: fit-content;
+        @include flex-row-space-between;
+        align-items: center;
+        gap: clamp(8px, 1.2vw, 16px);
+
+        &--icon {
+            display: block;
+            width: clamp(16px, 1.5vw, 20px);
+            height: clamp(16px, 1.5vw, 20px);
+            object-fit: contain;
+        }
+
+    }
+
+    &__gorizontal-line {
+        width: 100%;
+        height: 1px;
+        margin: clamp(18px, 2.5vw, 28px) 0 clamp(14px, 1.8vw, 22px);
+        background-color: var(--base-color-30);
+        opacity: 0.7;
+    }
+
+    &__sponsers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(8px, 1.4vw, 16px);
+        width: 100%;
+
+        &--item {
+            display: flex;
+
+        }
+
+        &--line {
+            height: clamp(20px, 6vw, 60px);
+            width: 1px;
+            min-width: 1px;
+            max-width: 1px;
+            flex: 0 0 1px;
+            background-color: var(--base-color-80);
+        }
+
+        img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: clamp(32px, 4vw, 52px);
+            object-fit: contain;
+        }
+
+        &--item:nth-of-type(2) {
+            img {
+                max-height: 30.5px;
+            }
+        }
+
+        &--item {
+            img {
+                max-height: 35px;
+            }
+        }
+
+
+    }
+}
