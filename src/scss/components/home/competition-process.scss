@@ -362,11 +362,11 @@
   }
 
   &__stats {
-    --stats-gap: clamp(18px, 2.6vw, 38px);
-
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: var(--stats-gap);
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr) clamp(20px, 2.4vw, 32px))
+      minmax(0, 1fr);
+    column-gap: clamp(8px, 1.2vw, 16px);
     align-items: center;
     width: 100%;
   }
@@ -378,17 +378,6 @@
     gap: clamp(8px, 0.9vw, 12px);
     min-width: 0;
 
-    &:not(:last-child)::after {
-      content: "\2192";
-      position: absolute;
-      top: 50%;
-      right: calc(var(--stats-gap) / -2);
-      color: var(--base-color-40);
-      font-size: clamp(18px, 1.7vw, 22px);
-      line-height: 1;
-      transform: translate(50%, -50%);
-    }
-
     &--accent {
       .competition-process__stat-icon {
         background-color: var(--base-color-80);
@@ -399,6 +388,19 @@
       .competition-process__stat-label {
         color: var(--base-color-80);
       }
+    }
+  }
+
+  &__stat-arrow {
+    @include flex-all-center;
+    width: clamp(20px, 2.4vw, 28px);
+    height: clamp(20px, 2.4vw, 28px);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -567,11 +569,24 @@
     }
 
     &__stats {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 12px;
       row-gap: 24px;
     }
 
-    &__stat:nth-child(3)::after {
+    &__stat {
+      flex: 0 1 calc((100% - 96px) / 3);
+    }
+
+    &__stat-arrow {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__stat-arrow:nth-child(6) {
       display: none;
     }
   }
@@ -698,25 +713,28 @@
     }
 
     &__stats {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px 14px;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 12px;
     }
 
     &__stat {
-      &:nth-child(2)::after,
-      &:nth-child(4)::after {
-        display: none;
-      }
+      flex: 0 0 auto;
+      width: min(100%, 190px);
+    }
 
-      &:nth-child(3)::after {
-        display: block;
-      }
+    &__stat-arrow,
+    &__stat-arrow:nth-child(6) {
+      display: flex;
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      transform: rotate(90deg);
     }
 
     &__stat--accent {
-      grid-column: 1 / -1;
-      justify-self: center;
-      width: min(100%, 180px);
+      width: min(100%, 190px);
     }
 
     &__final-note {
