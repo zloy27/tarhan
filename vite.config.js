@@ -16,6 +16,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
+        information: './information.html',
+        jury: './jury.html',
+        ambassadors: './ambassadors.html',
       },
     },
   },

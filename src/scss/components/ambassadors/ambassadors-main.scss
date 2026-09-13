@@ -1,0 +1,183 @@
+@keyframes jury-card-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 70px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+.ambassadors-main {
+    padding: clamp(52px, 6vw, 88px) 0;
+    scroll-margin-top: 120px;
+
+    &__container {
+        @include flex-column-space-between;
+        align-items: center;
+        gap: clamp(20px, 2.5vw, 32px);
+        width: 100%;
+
+    }
+
+    &__title {
+        color: var(--base-color-black);
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(40px, 4vw, 58px);
+        font-weight: 400;
+        line-height: 1.1;
+        text-align: center;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 16px;
+        width: 100%;
+        padding: 8px 1px;
+    }
+
+    &__card {
+        min-width: 0;
+        min-height: 390px;
+        padding: 14px 14px 22px;
+        background-color: var(--base-color-white);
+        @include flex-column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        border: 1px solid var(--base-color-80);
+        border-radius: 12px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(0, 70px, 0);
+        will-change: opacity, transform;
+
+        &--visible {
+            visibility: visible;
+            animation: jury-card-fade-in-up 0.8s ease-out both;
+        }
+
+        &--img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 8px;
+        }
+
+        &--title {
+            color: var(--base-color-black);
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(19px, 1.55vw, 23px);
+            font-weight: 400;
+            line-height: 1.2;
+
+        }
+
+        &--description {
+            color: var(--neutral-color-70);
+            font-size: clamp(14px, 1vw, 16px);
+            font-weight: 400;
+            line-height: 1.4;
+        }
+    }
+
+    @include tablet {
+        padding: clamp(42px, 6vw, 64px) 0;
+
+        &__cards {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        &__card {
+            min-height: 350px;
+        }
+    }
+
+    @include small-tablet {
+        &__cards {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        &__card {
+            min-height: 0;
+        }
+    }
+
+    @include mobile {
+        padding: 34px 0 42px;
+
+        &__container {
+            gap: 22px;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__cards {
+            grid-template-columns: 1fr;
+            gap: 12px;
+            padding: 4px 0;
+        }
+
+        &__card {
+            display: grid;
+            grid-template-columns: 104px minmax(0, 1fr);
+            grid-template-rows: auto 1fr;
+            align-items: start;
+            gap: 7px 14px;
+            min-height: 0;
+            padding: 10px;
+
+            &--img {
+                grid-row: 1 / 3;
+                width: 104px;
+                height: 104px;
+            }
+
+            &--title {
+                font-size: 18px;
+            }
+
+            &--description {
+                font-size: 13px;
+                line-height: 1.35;
+            }
+        }
+    }
+
+    @include small-mobile {
+        &__card {
+            grid-template-columns: 86px minmax(0, 1fr);
+
+            &--img {
+                width: 86px;
+                height: 86px;
+            }
+
+            &--title {
+                font-size: 16px;
+            }
+
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ambassadors-main__card {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+
+        &--visible {
+            animation: none;
+        }
+    }
+}

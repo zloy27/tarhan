@@ -68,6 +68,46 @@
         width: 100%;
     }
 
+    &__burger {
+        display: none;
+        position: relative;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        border: 1px solid color-mix(in srgb, var(--base-color-80) 35%, transparent);
+        border-radius: 8px;
+
+        span {
+            position: absolute;
+            left: 10px;
+            width: 22px;
+            height: 2px;
+            background-color: var(--base-color-black);
+            transition: transform var(--transition), opacity var(--transition), top var(--transition);
+
+            &:nth-child(1) { top: 13px; }
+            &:nth-child(2) { top: 20px; }
+            &:nth-child(3) { top: 27px; }
+        }
+
+        &--active {
+            span:nth-child(1) {
+                top: 20px;
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                top: 20px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
     &__title {
         min-width: 0;
 
@@ -83,92 +123,93 @@
             &:hover {
                 color: var(--base-color-80);
             }
+
+            &.active {
+                color: var(--base-color-80);
+            }
         }
     }
 
-    @include tablet {
-        &__logos {
-            gap: clamp(14px, 2.5vw, 26px);
-        }
-
-        &__titles {
-            justify-content: center;
-            flex-wrap: wrap;
-            column-gap: clamp(18px, 4vw, 36px);
-            row-gap: 10px;
-        }
-
-        &__title-a {
-            font-size: 18px;
-        }
-    }
-
-    @include small-tablet {
-        position: relative;
-
-        &__logos {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            column-gap: clamp(24px, 8vw, 56px);
-            row-gap: 14px;
-        }
-
-        &__logo {
-            justify-content: center;
-
-            &:last-child {
-                justify-content: center;
-            }
-
-            img {
-                max-height: 54px;
-            }
-
-            &--alien {
-                justify-self: center;
-            }
-        }
-
-        &__titles {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 10px 14px;
-        }
-
-        &__title {
-            text-align: center;
-        }
-
-        &__title-a {
-            font-size: 16px;
-            white-space: normal;
-        }
-    }
-
-    @include mobile {
-        padding: 16px 0;
+    @media (max-width: 997px) {
+        padding: 10px 0;
 
         &__container {
+            position: relative;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
             gap: 16px;
         }
 
         &__logos {
-            column-gap: 24px;
-            row-gap: 12px;
+            display: block;
+            width: min(62vw, 240px);
         }
 
-        &__logo img {
-            max-width: 160px;
-            max-height: 44px;
+        &__logo {
+            &:not(:first-child) {
+                display: none;
+            }
+
+            &--tarhan {
+                width: 100%;
+                max-width: 240px;
+            }
+        }
+
+        &__burger {
+            display: block;
         }
 
         &__titles {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 8px 12px;
+            position: absolute;
+            top: calc(100% + 11px);
+            right: 0;
+            display: flex;
+            align-items: stretch;
+            flex-direction: column;
+            gap: 0;
+            width: min(330px, calc(100vw - 30px));
+            padding: 10px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            background-color: var(--base-color-white);
+            border: 1px solid color-mix(in srgb, var(--base-color-80) 28%, transparent);
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 18px 30px rgba(61, 43, 31, 0.16);
+            transform: translateY(-8px);
+            transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+
+            &--open {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
         }
 
         &__title-a {
-            padding: 3px;
-            font-size: 15px;
+            padding: 12px 14px;
+            font-size: 16px;
+            white-space: normal;
+            border-radius: 7px;
+
+            &:hover,
+            &.active {
+                background-color: var(--base-color-20);
+            }
+        }
+    }
+
+    @include mobile {
+        &__logos {
+            width: min(66vw, 205px);
+        }
+
+        &__logo img {
+            max-width: 205px;
+            max-height: 42px;
         }
     }
 }

@@ -1,0 +1,215 @@
+.competition-questions {
+    width: 100%;
+    padding-bottom: 50px;
+    scroll-margin-top: 120px;
+
+    &__container {
+        max-width: 70%;
+        @include flex-column-space-between;
+        align-items: center;
+        gap: clamp(24px, 2vh, 36px);
+
+    }
+
+    &__subtitle {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(16px, 3vw, 24px);
+
+        font-size: 24px;
+        line-height: 1.5;
+        color: var(--base-color-80);
+        text-wrap: nowrap;
+        font-weight: 600;
+
+        &--line {
+            height: 1.5px;
+            width: 30%;
+            background-color: var(--base-color-80);
+
+        }
+
+    }
+
+    &__title {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(30px, 3vw, 48px);
+        font-weight: 400;
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+        color: var(--base-color-black);
+    }
+
+    &__accordion {
+        background-color: var(--base-color-white);
+        &--item:not(:last-child){
+            border-bottom: solid 1.5px var(--base-color-80);
+        }
+        &--bt {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--base-color-black);
+            background-color: transparent;
+            cursor: pointer;
+            padding: 20px 36px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: color 0.25s ease;
+
+            &::after {
+                content: '+';
+                display: grid;
+                flex: 0 0 26px;
+                width: 26px;
+                height: 26px;
+                place-items: center;
+                color: #101010;
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 1;
+                transition: color 0.25s ease;
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--base-color-80);
+                outline-offset: -2px;
+            }
+        }
+
+        &--bt.active {
+            color: var(--base-color-80);
+
+            &::after {
+                content: '−';
+                color: var(--base-color-80);
+            }
+        }
+
+        &--panel {
+            padding: 0 36px;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition:
+                max-height 0.45s ease,
+                opacity 0.3s ease;
+            will-change: max-height;
+            padding-bottom: 18px;
+        }
+
+        &--bt.active+&--panel {
+            opacity: 1;
+        }
+        &--p{
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+    }
+    &__footer{
+        @include flex-row-space-between;
+        font-weight: 500;
+        &--span{
+            padding: 0 4px 0 4px;
+            color: var(--base-color-80);
+            font-weight: 500;
+        }
+    }
+
+    @include tablet {
+        padding-bottom: 42px;
+
+        &__container {
+            max-width: 86%;
+        }
+
+        &__subtitle {
+            font-size: 19px;
+        }
+
+        &__accordion--bt {
+            padding: 18px 24px;
+            font-size: 17px;
+        }
+
+        &__accordion--panel {
+            padding-right: 24px;
+            padding-left: 24px;
+        }
+    }
+
+    @include small-tablet {
+        &__container {
+            max-width: 100%;
+            gap: 22px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__accordion--bt {
+            gap: 14px;
+            padding: 17px 18px;
+        }
+
+        &__accordion--panel {
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+
+        &__footer {
+            display: block;
+            text-align: center;
+            line-height: 1.6;
+        }
+    }
+
+    @include mobile {
+        &__subtitle {
+            gap: 10px;
+            font-size: 15px;
+            white-space: nowrap;
+
+            &--line {
+                width: auto;
+                flex: 1 1 auto;
+            }
+        }
+
+        &__title {
+            font-size: 29px;
+        }
+
+        &__accordion--bt {
+            padding: 16px 14px;
+            font-size: 15px;
+
+            &::after {
+                flex-basis: 22px;
+                width: 22px;
+                height: 22px;
+                font-size: 23px;
+            }
+        }
+
+        &__accordion--panel {
+            padding-right: 14px;
+            padding-left: 14px;
+        }
+
+        &__accordion--p,
+        &__footer {
+            font-size: 14px;
+        }
+    }
+}

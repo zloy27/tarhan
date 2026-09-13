@@ -353,8 +353,8 @@
   }
 
   &__banner {
+    width: 100%;
     align-self: center;
-    width: min(100%, 1096px);
     padding: clamp(14px, 1.4vw, 18px) clamp(18px, 2.4vw, 30px);
     background-color: var(--base-color-white);
     border: 1px solid var(--process-border);
@@ -362,10 +362,7 @@
   }
 
   &__stats {
-    display: grid;
-    grid-template-columns:
-      repeat(4, minmax(0, 1fr) clamp(20px, 2.4vw, 32px))
-      minmax(0, 1fr);
+    @include flex-row-space-between;
     column-gap: clamp(8px, 1.2vw, 16px);
     align-items: center;
     width: 100%;
@@ -560,12 +557,20 @@
   }
 
   @include tablet {
+    padding: clamp(52px, 7vw, 72px) 0;
+
+    &__container {
+      gap: clamp(22px, 3vw, 30px);
+    }
+
     &__main {
       grid-template-columns: 1fr;
+      gap: 20px;
     }
 
     &__round {
       min-height: 0;
+      padding: clamp(24px, 4vw, 34px);
     }
 
     &__stats {
@@ -677,6 +682,7 @@
     &__round-title {
       padding-top: 7px;
       font-size: 17px;
+      text-transform: none;
     }
 
     &__stage {
@@ -709,7 +715,7 @@
     }
 
     &__banner {
-      padding: 20px 16px;
+      padding: 20px 14px;
     }
 
     &__stats {
@@ -747,6 +753,16 @@
     &__service {
       align-items: flex-start;
       flex-direction: column;
+    }
+
+    &__service-icon {
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 34px;
+        height: 34px;
+      }
     }
 
     &__download {

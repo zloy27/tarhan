@@ -1,4 +1,6 @@
 import '../scss/home.scss';
+import { initAccordion } from './components/home-accrodion.js';
+import { initPageNavigation } from './components/page-navigation.js';
 
 const invitationVideo = document.querySelector('.competition-invitation__video video');
 
@@ -24,3 +26,6 @@ if (invitationVideo) {
 
   visibilityObserver.observe(invitationVideo);
 }
+
+initAccordion();
+initPageNavigation();

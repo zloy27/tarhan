@@ -1,0 +1,175 @@
+.contacts {
+    width: 100%;
+    padding: clamp(48px, 6vw, 88px) 0 0;
+    scroll-margin-top: 120px;
+
+    &__container {
+        @include flex-column;
+        align-items: center;
+        gap: clamp(22px, 3vw, 34px);
+        background-color: transparent;
+    }
+
+    &__subtitle {
+        @include flex-all-center;
+        gap: clamp(14px, 2vw, 24px);
+        color: var(--base-color-80);
+        font-size: clamp(14px, 1.2vw, 18px);
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+
+        &--line {
+            width: clamp(48px, 6vw, 76px);
+            height: 1px;
+            background-color: var(--base-color-80);
+        }
+    }
+
+    &__title {
+        color: var(--base-color-black);
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(36px, 4vw, 58px);
+        font-weight: 400;
+        line-height: 1.1;
+        text-align: center;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
+        width: 100%;
+        overflow: hidden;
+        border: 1px solid color-mix(in srgb, var(--base-color-80) 70%, transparent);
+        border-radius: 16px;
+        background-color: var(--base-color-white);
+    }
+
+    &__info {
+        @include flex-column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: clamp(28px, 4vw, 48px);
+
+        &--title {
+            color: var(--base-color-black);
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(27px, 2.5vw, 38px);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        &--text {
+            color: var(--base-color-black);
+            font-size: clamp(15px, 1.25vw, 18px);
+            line-height: 1.45;
+        }
+    }
+
+    &__list {
+        @include flex-column;
+        gap: 14px;
+        width: 100%;
+        margin-top: 8px;
+
+        &--item {
+            display: grid;
+            grid-template-columns: 28px minmax(0, 1fr);
+            align-items: center;
+            gap: 14px;
+        }
+
+        &--item img {
+            display: block;
+            width: 26px;
+            height: 26px;
+        }
+
+        &--link {
+            color: var(--base-color-80);
+            font-size: clamp(15px, 1.2vw, 18px);
+            line-height: 1.4;
+            overflow-wrap: anywhere;
+        }
+
+        &--address {
+            color: var(--base-color-black);
+            font-size: clamp(15px, 1.2vw, 18px);
+            font-style: normal;
+            line-height: 1.45;
+        }
+    }
+
+    &__button {
+        @include flex-all-center;
+        gap: 18px;
+        min-height: 50px;
+        margin-top: auto;
+        padding: 10px 24px;
+        border: 1px solid var(--base-color-80);
+        border-radius: 8px;
+        color: var(--base-color-80);
+        font-size: clamp(15px, 1.15vw, 17px);
+        font-weight: 600;
+        transition: var(--transition);
+
+        &:hover {
+            color: var(--base-color-white);
+            background-color: var(--base-color-80);
+        }
+    }
+
+    &__map {
+        min-height: 440px;
+        padding: 28px 28px 28px 0;
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 384px;
+            border: 0;
+            border-radius: 12px;
+        }
+    }
+
+    @include tablet {
+        &__box {
+            grid-template-columns: 1fr;
+        }
+
+        &__map {
+            min-height: 380px;
+            padding: 0 28px 28px;
+        }
+    }
+
+    @include mobile {
+        padding-top: 40px;
+
+        &__subtitle {
+            width: 100%;
+
+            &--line {
+                flex: 1;
+            }
+        }
+
+        &__info {
+            padding: 24px 20px;
+        }
+
+        &__button {
+            width: 100%;
+        }
+
+        &__map {
+            min-height: 320px;
+            padding: 0 20px 20px;
+
+            iframe {
+                min-height: 300px;
+            }
+        }
+    }
+}

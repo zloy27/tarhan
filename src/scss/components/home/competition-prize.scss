@@ -186,14 +186,59 @@
     }
 
     @include tablet {
+        padding: clamp(36px, 6vw, 52px) 0;
+
+        &__main {
+            align-items: center;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        &__info {
+            align-items: stretch;
+            gap: 22px;
+            max-width: 720px;
+
+            &--subtitle {
+                align-self: center;
+            }
+
+            &--title {
+                font-size: clamp(22px, 3.2vw, 28px);
+                text-align: center;
+            }
+
+            &--text {
+                max-width: none;
+                font-size: clamp(16px, 2.1vw, 19px);
+            }
+        }
+
+        &__flyer {
+            align-self: center;
+            flex-basis: auto;
+            width: min(100%, 470px);
+            padding: 10px;
+        }
+
         &__bunner {
             flex-wrap: wrap;
-            gap: 24px;
+            gap: clamp(18px, 3vw, 28px);
+            margin-top: 32px;
+            padding: clamp(20px, 3.5vw, 32px);
 
             &--info {
                 align-items: flex-start;
                 flex: 1 1 100%;
                 max-width: none;
+            }
+
+            &--icons {
+                flex: 1 1 auto;
+            }
+
+            &--line {
+                min-height: 104px;
             }
         }
     }
@@ -212,9 +257,24 @@
             align-items: stretch;
             flex-direction: column;
             padding: 26px 24px;
+            background-size: cover;
 
             &--icons {
-                justify-content: center;
+                justify-content: space-evenly;
+                gap: 18px;
+            }
+
+            &--icon {
+                display: flex;
+                align-items: center;
+                flex: 1 1 0;
+                flex-direction: column;
+                text-align: center;
+
+                img {
+                    width: clamp(72px, 16vw, 104px);
+                    height: clamp(72px, 16vw, 104px);
+                }
             }
 
             &--line {
@@ -226,6 +286,49 @@
             &--button {
                 width: 100%;
                 min-width: 0;
+            }
+        }
+    }
+
+    @include mobile {
+        &__info--marker {
+            display: none;
+        }
+
+        &__info--subtitle-text {
+            font-size: 12px;
+            letter-spacing: 0.12em;
+        }
+
+        &__flyer {
+            padding: 0;
+        }
+
+        &__bunner {
+            margin-top: 26px;
+            padding: 22px 18px;
+            border: 1px solid color-mix(in srgb, var(--base-color-80) 25%, transparent);
+            border-radius: 12px;
+
+            &--title {
+                font-size: 19px;
+            }
+
+            &--text {
+                font-size: 15px;
+                line-height: 1.45;
+            }
+
+            &--icons {
+                align-items: flex-start;
+            }
+
+            &--icon p {
+                font-size: 13px;
+            }
+
+            &--button {
+                min-height: 52px;
             }
         }
     }
