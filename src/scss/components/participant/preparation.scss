@@ -1,0 +1,299 @@
+.participant {
+    color: var(--base-color-black);
+
+    &__header {
+        @include flex-column;
+        align-items: center;
+        gap: 20px;
+        padding-top: clamp(40px, 6vw, 80px);
+        padding-bottom: clamp(36px, 5vw, 64px);
+        text-align: center;
+    }
+
+    &__title {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(36px, 4vw, 58px);
+        font-weight: 400;
+        line-height: 1.1;
+    }
+
+    &__intro {
+        max-width: 620px;
+        font-size: clamp(16px, 1.5vw, 20px);
+        line-height: 1.6;
+    }
+
+    .competition-questions__container {
+        max-width: calc(var(--container-width) + var(--container-padding) * 2);
+    }
+
+    .competition-questions__accordion {
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .competition-questions__title {
+        text-align: center;
+    }
+
+    .competition-questions__footer {
+        display: block;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .competition-questions__footer a {
+        color: var(--base-color-80);
+        white-space: nowrap;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+        outline: 2px solid var(--base-color-80);
+        outline-offset: 4px;
+    }
+}
+
+.preparation {
+    padding: clamp(20px, 4vw, 48px) 0 clamp(50px, 6vw, 80px);
+    scroll-margin-top: 120px;
+    line-height: 1.6;
+
+    &__container {
+        @include flex-column;
+        gap: clamp(28px, 4vw, 44px);
+    }
+
+    &__header {
+        @include flex-column;
+        align-items: center;
+        gap: 18px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        @include flex-all-center;
+        gap: 16px;
+        font-size: clamp(14px, 1.4vw, 18px);
+        color: var(--base-color-80);
+
+        span {
+            width: clamp(24px, 5vw, 60px);
+            height: 1px;
+            background: var(--base-color-80);
+        }
+    }
+
+    &__title,
+    &__heading,
+    &__card--title {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    &__title {
+        font-size: clamp(30px, 3vw, 48px);
+    }
+
+    &__description {
+        max-width: 740px;
+        font-size: clamp(16px, 1.4vw, 18px);
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    &__card {
+        @include flex-column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: clamp(22px, 3vw, 36px);
+        border: 1px solid rgba(200, 117, 82, 0.45);
+        border-radius: 16px;
+        background: var(--base-color-white);
+
+        &--title {
+            font-size: clamp(25px, 2.4vw, 32px);
+        }
+
+        >.preparation__button,
+        >.preparation__actions {
+            margin-top: auto;
+        }
+    }
+
+    &__label {
+        color: var(--base-color-80);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__actions {
+        @include flex-row;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    &__button {
+        @include flex-all-center;
+        gap: 20px;
+        min-height: 50px;
+        padding: 10px 22px;
+        border: 1px solid var(--base-color-80);
+        border-radius: 8px;
+        color: var(--base-color-80);
+        font-weight: 600;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+            background: var(--base-color-80);
+            color: var(--base-color-white);
+        }
+    }
+
+    &__books {
+        @include flex-column;
+        gap: 24px;
+    }
+
+    &__section-header {
+        @include flex-column;
+        gap: 10px;
+    }
+
+    &__heading {
+        font-size: clamp(26px, 2.5vw, 36px);
+    }
+
+    &__entry {
+        padding: 20px 0;
+    }
+
+    &__list {
+        li {
+            border-bottom: 1px solid rgba(200, 117, 82, 0.3);
+        }
+
+        li:first-child {
+            border-top: 1px solid rgba(200, 117, 82, 0.3);
+        }
+
+        a {
+            @include flex-row-space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+            color: var(--base-color-black);
+        }
+
+        a:hover {
+            color: var(--base-color-80);
+        }
+
+        strong {
+            display: block;
+            font-weight: 600;
+        }
+
+        small {
+            display: block;
+            margin-top: 4px;
+            color: var(--neutral-color-70);
+            font-size: 14px;
+        }
+
+        a>span:last-child {
+            flex-shrink: 0;
+            color: var(--base-color-80);
+            font-size: 22px;
+        }
+    }
+
+    &__collection {
+        padding: 0 clamp(18px, 3vw, 28px);
+        border: 1px solid rgba(200, 117, 82, 0.45);
+        border-radius: 10px;
+        background: var(--base-color-white);
+
+        summary {
+            padding: 22px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        summary::marker {
+            color: var(--base-color-80);
+        }
+
+        summary span {
+            margin-left: 10px;
+            color: var(--neutral-color-70);
+            font-size: 14px;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        .preparation__list li:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__source {
+        @include flex-row-space-between;
+        align-items: center;
+        gap: 24px;
+
+        p {
+            max-width: 680px;
+        }
+
+        &--link {
+            flex-shrink: 0;
+            color: var(--base-color-80);
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__cards {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        &__source {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__actions {
+            width: 100%;
+        }
+
+        &__button {
+            flex: 1;
+            width: 100%;
+        }
+
+        &__subtitle {
+            gap: 10px;
+        }
+
+        &__source--link {
+            flex-shrink: 1;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        &__button {
+            transition: none;
+        }
+    }
+}

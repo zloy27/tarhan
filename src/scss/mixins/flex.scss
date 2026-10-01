@@ -49,6 +49,11 @@
     flex-direction: column;
     justify-content: space-between;
 }
+@mixin flex-column-space-around{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 @mixin flex-row-space-around{
     display: flex;
     flex-direction: row;

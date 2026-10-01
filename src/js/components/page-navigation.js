@@ -6,9 +6,13 @@ const getPageName = (pathname) => {
 
 export const initPageNavigation = () => {
   const currentPage = getPageName(window.location.pathname);
+  const sectionPage = ({
+    'season.html': 'archive.html',
+    'registration.html': 'entrance.html',
+    'forgot-password.html': 'entrance.html',
+    'reset-password.html': 'entrance.html'
+  })[currentPage] || currentPage;
   const navigationLinks = document.querySelectorAll('.header__title-a');
-  const firstPageSection = document.querySelector('main > [id], body > [id]');
-  const defaultHash = firstPageSection ? `#${firstPageSection.id}` : '';
   const burgerButton = document.querySelector('.header__burger');
   const headerNavigation = document.querySelector('.header__titles');
 
@@ -50,9 +54,8 @@ export const initPageNavigation = () => {
     navigationLinks.forEach((link) => {
       const linkUrl = new URL(link.href, window.location.href);
       const linkPage = getPageName(linkUrl.pathname);
-      const isSamePage = linkUrl.origin === window.location.origin && linkPage === currentPage;
-      const currentHash = window.location.hash || defaultHash;
-      const isActive = isSamePage && (!linkUrl.hash || linkUrl.hash === currentHash);
+      const isSamePage = linkUrl.origin === window.location.origin && linkPage === sectionPage;
+      const isActive = isSamePage;
 
       link.classList.toggle('active', isActive);
 

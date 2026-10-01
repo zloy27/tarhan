@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/src/scss/components/loader.scss">
+<div class="loader" hidden>
+    <div class="loader__icon">
+        <img src="/src/assets/photo/competition-hero/tarhan-logo-editorial-hq.png" width="80" height="80" alt="Тархан">
+    </div>
+    <p class="loader__text" role="status">Загружаем страницу…</p>
+</div>
+<script>
+    (() => {
+        const loader = document.querySelector('.loader');
+        if (!loader || document.readyState === 'complete') return;
+
+        const hideLoader = () => {
+            loader.hidden = true;
+            clearTimeout(timeout);
+        };
+
+        // Таймер ставим до показа: ошибка в других скриптах не оставит экран закрытым.
+        const timeout = setTimeout(hideLoader, 5000);
+        window.addEventListener('load', hideLoader, { once: true });
+        window.addEventListener('pagehide', hideLoader, { once: true });
+        loader.hidden = false;
+    })();
+</script>

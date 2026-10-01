@@ -1,0 +1,40 @@
+.registration {
+    padding: clamp(32px, 5vw, 64px) 0;
+    &__container { max-width: 1060px; }
+    &__subtitle { color: var(--base-color-80); text-transform: uppercase; letter-spacing: .15em; font-size: 14px; }
+    &__title { font-family: Georgia, serif; font-weight: 400; font-size: clamp(32px, 4vw, 48px); margin: 12px 0 18px; }
+    &__hint { font-size: 14px; line-height: 1.5; margin: 12px 0 20px; }
+    &__form { background: var(--base-color-white); border: 1px solid #e4d5c7; border-radius: 14px; padding: clamp(20px, 4vw, 40px); }
+    &__group { border: 0; padding: 0; margin: 0 0 30px; min-width: 0;
+        legend { width: 100%; border-bottom: 1px solid #e4d5c7; font: 23px/1.4 Georgia, serif; margin-bottom: 20px; padding: 0 0 10px; }
+        legend span { color: var(--base-color-80); margin-right: 14px; }
+        p { line-height: 1.6; font-size: 14px; }
+    }
+    &__fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    &__field { @include flex-column; gap: 8px; min-width: 0; font-size: 14px;
+        input, select { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; border: 1px solid #d8cdc1; border-radius: 5px; background: var(--base-color-white); color: var(--base-color-black); font: inherit; }
+        input[aria-invalid='true'] { border-color: #a52a20; }
+        input:read-only { background: var(--base-color-white-ivory); }
+    }
+    &__message, &__school { font-size: 14px; line-height: 1.6; color: var(--base-color-60); margin-bottom: 24px; }
+    &__document { display: inline-block; margin: 16px 0; }
+    a { color: var(--base-color-80); &:hover { text-decoration: underline; } }
+    &__upload { @include flex-column; gap: 12px; border: 1px dashed #d8cdc1; padding: 20px; border-radius: 6px; margin-bottom: 20px;
+        input { max-width: 100%; font: inherit; }
+        small { color: var(--neutral-color-70); }
+    }
+    &__agreement { @include flex-row; gap: 10px; align-items: flex-start; line-height: 1.5;
+        input { width: 20px; height: 20px; flex: 0 0 20px; accent-color: var(--base-color-80); }
+    }
+    &__suggestions { margin: 0 0 20px; border: 1px solid #d8cdc1; border-radius: 6px;
+        button { padding: 12px; width: 100%; text-align: left; font: inherit; color: var(--base-color-black); }
+        button:hover, button:focus { background: var(--base-color-white-ivory); }
+    }
+    &__errors { color: #a52a20; line-height: 1.6; margin-bottom: 20px; white-space: pre-line; }
+    &__submit { width: 100%; min-height: 50px; background: var(--base-color-80); color: white; border-radius: 6px; padding: 14px; font-weight: 600; }
+    &__submit:disabled { opacity: .55; cursor: not-allowed; }
+    &__login { margin-top: 20px; text-align: center; font-size: 14px; }
+    :is(input, select, button, a):focus-visible { outline: 2px solid var(--base-color-80); outline-offset: 3px; }
+    @include tablet { &__fields { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @include mobile { &__fields { grid-template-columns: 1fr; } &__group legend { font-size: 21px; } }
+}

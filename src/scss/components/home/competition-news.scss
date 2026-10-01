@@ -1,0 +1,173 @@
+.competition-news {
+    width: 100%;
+    padding: clamp(54px, 6vw, 84px) 0;
+    background-color: var(--base-color-white-ivory);
+    scroll-margin-top: 120px;
+
+    &__container {
+        position: relative;
+        @include flex-column;
+        max-width: 1200px;
+        align-items: stretch;
+        gap: clamp(24px, 3vw, 34px);
+        padding-bottom: clamp(30px, 3.5vw, 44px);
+        background-color: transparent;
+        border-bottom: 1px solid color-mix(in srgb, var(--base-color-80) 45%, transparent);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: calc(50% - 5px);
+            width: 10px;
+            height: 10px;
+            border: 1px solid color-mix(in srgb, var(--base-color-80) 45%, transparent);
+            background-color: var(--base-color-white-ivory);
+            box-shadow: 0 0 0 6px var(--base-color-white-ivory);
+            transform: rotate(45deg);
+        }
+    }
+
+    &__heading {
+        @include flex-column;
+        gap: 16px;
+        min-width: 0;
+        padding-bottom: clamp(22px, 2.5vw, 30px);
+        border-bottom: 1px solid color-mix(in srgb, var(--base-color-80) 35%, transparent);
+    }
+
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--base-color-black);
+        font-size: clamp(12px, 1vw, 14px);
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            flex: 0 0 28px;
+            height: 2px;
+            background-color: var(--base-color-80);
+        }
+    }
+
+    &__title {
+        margin: 0;
+        color: var(--base-color-black);
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(28px, 3vw, 42px);
+        font-weight: 400;
+        line-height: 1.12;
+        text-wrap: balance;
+    }
+
+    &__content {
+        @include flex-row-space-between;
+        align-items: center;
+        gap: clamp(24px, 4vw, 56px);
+        min-width: 0;
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: 700px;
+        margin: 0;
+        color: var(--base-color-black);
+        font-size: clamp(16px, 1.4vw, 18px);
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+    &__link {
+        display: inline-flex;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 12px;
+        max-width: 100%;
+        color: var(--base-color-80);
+        font-size: clamp(14px, 1.3vw, 19px);
+        font-weight: 400;
+        line-height: 1.3;
+        transition: color var(--transition), border-color var(--transition);
+
+        > span:nth-child(2) {
+            padding-bottom: 5px;
+            border-bottom: 1px solid currentColor;
+        }
+
+        &--icon {
+            display: grid;
+            flex: 0 0 28px;
+            width: 28px;
+            height: 24px;
+            place-items: center;
+            background-color: currentColor;
+            mask: url('/src/assets/icons/footer/vk.svg') center / contain no-repeat;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                visibility: hidden;
+            }
+        }
+
+        &--arrow {
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 1;
+            transition: transform var(--transition);
+        }
+
+        &:hover,
+        &:focus-visible {
+            color: var(--base-color-black);
+        }
+
+        &:hover &--arrow,
+        &:focus-visible &--arrow {
+            transform: translateX(4px);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--base-color-80);
+            outline-offset: 5px;
+        }
+    }
+
+    @include tablet {
+        &__content {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    @include mobile {
+        padding: 38px 0;
+
+        &__container {
+            gap: 22px;
+            padding-bottom: 26px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__text {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        &__link {
+            gap: 10px;
+            font-size: 14px;
+        }
+    }
+}

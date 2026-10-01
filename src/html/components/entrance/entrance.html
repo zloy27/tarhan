@@ -1,0 +1,40 @@
+<section class="entrance" id="entrance">
+    <div class="entrance__container container">
+        <div class="entrance__subtitle">Участнику</div>
+        <h1 class="entrance__title">Вход участника</h1>
+        <div class="entrance__item">
+            <div class="entrance__item--img" aria-hidden="true"></div>
+            <form class="entrance__item--box" method="post">
+                <h2 class="entrance__box--title">Войдите в свой аккаунт</h2>
+                <div class="entrance__input">
+                    <label class="entrance__input--title" for="login">Email</label>
+                    <input class="entrance__input--input" id="login" name="username" type="email" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="Введите e-mail" required>
+                </div>
+                <div class="entrance__input">
+                    <label class="entrance__input--title" for="password">Пароль</label>
+                    <div class="entrance__password">
+                        <input class="entrance__input--input" id="password" name="password" type="password" autocomplete="current-password" placeholder="Введите пароль" required>
+                        <button class="entrance__password--toggle" type="button" aria-label="Показать пароль" aria-pressed="false" aria-controls="password">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                                <path class="entrance__password--slash" d="m3 3 18 18"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="entrance__options">
+                    <a href="./forgot-password.html" class="entrance__input--forgot-password">Забыли пароль?</a>
+                </div>
+                <button class="entrance__input--bt" type="submit">Войти <span aria-hidden="true">→</span></button>
+                <p class="entrance__message" role="status" hidden></p>
+                <p class="entrance__input--registration">Нет аккаунта? <a href="./registration.html">Зарегистрироваться</a></p>
+                
+                
+
+            </form>
+
+        </div>
+        <a class="entrance__back" href="./index.html">← Вернуться на главную</a>
+    </div>
+</section>

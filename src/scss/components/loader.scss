@@ -1,0 +1,68 @@
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--base-color-white-ivory, #f7f3ea);
+    // Дополнительная страховка независимо от JavaScript.
+    animation: loader-dismiss 0s 5s forwards;
+
+    &[hidden] {
+        display: none;
+    }
+
+    &__icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 128px;
+        height: 128px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            box-sizing: border-box;
+            border: 3px solid #e8d8ba;
+            border-top-color: var(--base-color-80, #c87552);
+            border-radius: 50%;
+            animation: loader-spin 1.2s linear infinite;
+        }
+
+        img {
+            display: block;
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #606060;
+    }
+}
+
+@keyframes loader-spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes loader-dismiss {
+    to {
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .loader__icon::before {
+        animation: none;
+    }
+}

@@ -448,12 +448,9 @@
 
   &__footer {
     display: grid;
-    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.15fr) minmax(
-        230px,
-        0.9fr
-      );
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.8fr) minmax(0, 1.35fr);
     gap: 0;
-    padding: clamp(20px, 2.5vw, 30px);
+    padding: clamp(24px, 3vw, 36px);
     background-color: var(--base-color-white);
     background-image: url("/src/assets/photo/competition-process/service-panel-background.svg");
     background-position: center;
@@ -465,10 +462,19 @@
     @include flex-align-center;
     gap: clamp(14px, 1.6vw, 20px);
     min-width: 0;
-    padding: 0 clamp(18px, 2.2vw, 28px);
+    min-height: clamp(132px, 12vw, 164px);
+    padding: 0 clamp(22px, 2.5vw, 34px);
 
-    &--admission {
+    &:first-child {
       padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    > div {
+      min-width: 0;
     }
 
     &--broadcast {
@@ -478,15 +484,16 @@
   }
 
   &__service-icon {
-    width: 58px;
-    height: 58px;
+    flex: 0 0 clamp(52px, 5vw, 62px);
+    width: clamp(52px, 5vw, 62px);
+    height: clamp(52px, 5vw, 62px);
     background-color: var(--base-color-20);
     border: 1px solid var(--process-border-soft);
     border-radius: 10px;
 
     img {
-      width: 40px;
-      height: 40px;
+      width: clamp(34px, 3.4vw, 42px);
+      height: clamp(34px, 3.4vw, 42px);
       object-fit: contain;
     }
   }
@@ -494,7 +501,7 @@
   &__service-title {
     margin-bottom: 6px;
     color: var(--base-color-40);
-    font-size: clamp(14px, 1.2vw, 17px);
+    font-size: clamp(14px, 1.25vw, 18px);
     font-weight: 700;
     line-height: 1.25;
     letter-spacing: 0.04em;
@@ -502,8 +509,8 @@
   }
 
   &__service-text {
-    font-size: clamp(12px, 1vw, 14px);
-    line-height: 1.45;
+    font-size: clamp(13px, 1.05vw, 15px);
+    line-height: 1.5;
   }
 
   &__download {
@@ -541,12 +548,28 @@
 
     &__footer {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      row-gap: 24px;
+      padding: clamp(24px, 4vw, 34px);
     }
 
-    &__service--broadcast {
-      padding-right: 0;
-      border-right: 0;
+    &__service {
+      min-height: 150px;
+
+      &:first-child {
+        grid-column: 1 / -1;
+        min-height: 0;
+        padding: 0 0 26px;
+        border-bottom: 1px solid var(--process-border);
+      }
+
+      &:nth-child(2) {
+        padding: 26px clamp(22px, 3vw, 34px) 0 0;
+        border-bottom: 0;
+        border-left: 0;
+      }
+
+      &:last-child {
+        padding: 26px 0 0 clamp(22px, 3vw, 34px);
+      }
     }
 
     &__download {
@@ -632,21 +655,30 @@
     &__footer {
       grid-template-columns: 1fr;
       gap: 0;
+      padding: 26px clamp(20px, 5vw, 30px);
       background-image: none;
       border: 1px solid var(--process-border-soft);
     }
 
     &__service {
+      min-height: 0;
       padding: 22px 0;
 
-      &--admission {
-        padding-top: 0;
+      &:first-child {
+        grid-column: auto;
+        padding: 0 0 22px;
       }
 
-      &--broadcast {
+      &:nth-child(2) {
+        padding: 22px 0;
         border-top: 1px solid var(--process-border);
         border-bottom: 1px solid var(--process-border);
+        border-right: 0;
         border-left: 0;
+      }
+
+      &:last-child {
+        padding: 22px 0 0;
       }
     }
 
@@ -752,10 +784,12 @@
 
     &__service {
       align-items: flex-start;
-      flex-direction: column;
+      flex-direction: row;
+      gap: 14px;
     }
 
     &__service-icon {
+      flex-basis: 48px;
       width: 50px;
       height: 50px;
 

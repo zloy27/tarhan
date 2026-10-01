@@ -1,0 +1,144 @@
+@keyframes card-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 70px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.seasons {
+    padding: 50px 0 50px;
+    width: 100%;
+
+    &__container {
+        @include flex-column-space-between;
+        gap: clamp(16px, 3vh, 32px);
+        align-items: center;
+    }
+
+    &__subtitle {
+        @include flex-row;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        text-wrap: nowrap;
+        gap: 10px;
+        font-size: 20px;
+        line-height: 1.3;
+        font-weight: 400;
+
+        &--line {
+            height: 2px;
+            background-color: var(--base-color-80);
+            flex: 1;
+            max-width: 50px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__cards { grid-template-columns: 1fr; }
+        &__title, &__text { text-align: center; }
+    }
+
+    &__title {
+        font-family: 'Gloria';
+        font-size: clamp(32px, 5vw, 56px);
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: clamp(18px, 2.5vw, 24px);
+        line-height: 1.2;
+    }
+
+    &__cards {
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        @media (max-width: 767px) { grid-template-columns: 1fr; }
+        width: 100%;
+        gap: 16px;
+
+    }
+
+    &__card {
+        min-width: 0;
+
+        border: solid 1.5px var(--base-color-80);
+        border-radius: 10px;
+        background-color: var(--base-color-white);
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+        visibility: hidden;
+        transform: translate3d(0, 70px, 0);
+        will-change: opacity, transform;
+
+        &:hover,
+        &:focus-within {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(61, 43, 31, 0.15);
+        }
+
+        &--visible {
+            visibility: visible;
+            animation: card-fade-in-up 0.8s ease-out both;
+
+        }
+
+        &--link {
+            @include flex-column;
+            align-items: self-start;
+            gap: 8px;
+            height: 100%;
+            padding: 20px;
+            color: inherit;
+            text-decoration: none;
+
+            &:focus-visible {
+                outline: 2px solid var(--base-color-80);
+                outline-offset: 3px;
+            }
+
+            &-box {
+                @include flex-row;
+                gap: 8px;
+                align-items: center;
+            }
+
+            &--text {
+                font-size: 20px;
+                color: var(--base-color-80);
+                font-weight: 600;
+                text-wrap: nowrap;
+            }
+
+            &-img {
+                max-height: 30px;
+                width: auto;
+            }
+
+        }
+
+        &--img img {
+            aspect-ratio: 3/2;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        &--title {
+            margin-top: 10px;
+            font-size: 24px;
+            line-height: 1.3;
+            font-weight: 700;
+
+        }
+    }
+}

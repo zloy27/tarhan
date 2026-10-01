@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  publicDir: false,
+  publicDir: 'public',
   build: {
     outDir: './dist',
     emptyOutDir: true,
@@ -19,6 +19,14 @@ export default defineConfig({
         information: './information.html',
         jury: './jury.html',
         ambassadors: './ambassadors.html',
+        archive: './archive.html',
+        season: './season.html',
+        participant: './participant.html',
+        entrance: './entrance.html',
+        registration: './registration.html',
+        forgotPassword: './forgot-password.html',
+        resetPassword: './reset-password.html',
+        notFound: './404.html',
       },
     },
   },

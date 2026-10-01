@@ -1,0 +1,139 @@
+.entrance {
+    padding: clamp(36px, 5vw, 64px) 0;
+
+    &__container {
+        @include flex-column;
+        align-items: center;
+    }
+
+    &__subtitle {
+        color: var(--base-color-80);
+        font-size: 14px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__title {
+        margin: 14px 0 30px;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(34px, 4vw, 56px);
+        font-weight: 400;
+        line-height: 1.15;
+        text-align: center;
+        color: var(--base-color-black);
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.2fr);
+        width: 100%;
+        max-width: 1080px;
+        overflow: hidden;
+        border: 1px solid color-mix(in srgb, var(--base-color-40) 45%, transparent);
+        border-radius: 16px;
+        background-color: var(--base-color-white);
+
+        &--img {
+            @include flex-column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-width: 0;
+            padding: 40px;
+            background-color: var(--base-color-white-ivory);
+            background-image: url('/src/assets/photo/competition-prize/ornament-pattern.svg');
+            background-repeat: no-repeat;
+            background-size: 560px;
+            background-position: -240px -40px;
+        }
+
+        &--box {
+            @include flex-column;
+            gap: 22px;
+            min-width: 0;
+            padding: clamp(24px, 4vw, 56px);
+        }
+    }
+
+    &__box--title {
+        margin-bottom: 8px;
+        font-size: clamp(23px, 2.4vw, 30px);
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+    &__input {
+        @include flex-column;
+        gap: 8px;
+
+        &--title { font-size: 15px; line-height: 1.4; }
+        &--input {
+            width: 100%;
+            min-width: 0;
+            min-height: 54px;
+            padding: 14px 18px;
+            border: 1px solid color-mix(in srgb, var(--base-color-40) 35%, transparent);
+            border-radius: 7px;
+            background-color: var(--base-color-white);
+            color: var(--base-color-black);
+            font: inherit;
+            &::placeholder { color: var(--neutral-color-120); }
+        }
+
+        &--bt {
+            @include flex-all-center;
+            gap: 12px;
+            min-height: 54px;
+            padding: 14px 20px;
+            border-radius: 7px;
+            background-color: var(--base-color-80);
+            color: var(--base-color-white);
+            font-size: 18px;
+            font-weight: 600;
+            transition: background-color var(--transition);
+            &:hover { background-color: var(--base-color-50); }
+        }
+
+        &--registration { text-align: center; font-size: 15px; line-height: 1.6; }
+    }
+
+    &__password {
+        position: relative;
+        input { padding-right: 54px; }
+        &--toggle {
+            position: absolute;
+            top: 0;
+            right: 4px;
+            @include flex-all-center;
+            width: 44px;
+            height: 54px;
+            color: var(--neutral-color-70);
+        }
+        &--slash { display: none; }
+        &--toggle[aria-pressed='true'] &--slash { display: block; }
+    }
+
+    &__options {
+        @include flex-row-space-between;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    a { color: var(--base-color-80); &:hover { text-decoration: underline; } }
+    &__back { margin-top: 28px; font-size: 15px; }
+    &__message { margin: 0; font-size: 14px; line-height: 1.5; color: var(--base-color-60); }
+    :is(input, button, a):focus-visible { outline: 2px solid var(--base-color-80); outline-offset: 3px; }
+
+    @include small-tablet {
+        &__item { grid-template-columns: 1fr; max-width: 540px; }
+        &__item--img { display: none; }
+    }
+
+    @include mobile {
+        &__item--box { padding: 26px 20px; }
+        &__options { font-size: 13px; }
+    }
+}
