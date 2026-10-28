@@ -1,16 +1,20 @@
 const getPageName = (pathname) => {
   const pageName = pathname.split('/').filter(Boolean).at(-1);
 
-  return pageName?.includes('.') ? pageName : 'index.html';
+  if (!pageName) return 'index.html';
+  return pageName.includes('.') ? pageName : `${pageName}.html`;
 };
 
 export const initPageNavigation = () => {
   const currentPage = getPageName(window.location.pathname);
-  const sectionPage = ({
+  const sectionPage = (window.location.pathname.includes('/archive/') ? 'archive.html' : null) || ({
     'season.html': 'archive.html',
+    'ambassadors.html': 'jury.html',
     'registration.html': 'entrance.html',
     'forgot-password.html': 'entrance.html',
-    'reset-password.html': 'entrance.html'
+    'reset-password.html': 'entrance.html',
+    'test.html': 'entrance.html',
+    'essay.html': 'entrance.html'
   })[currentPage] || currentPage;
   const navigationLinks = document.querySelectorAll('.header__title-a');
   const burgerButton = document.querySelector('.header__burger');

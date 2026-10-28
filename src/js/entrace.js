@@ -14,8 +14,28 @@ toggle.addEventListener('click', () => {
     toggle.setAttribute('aria-label', showPassword ? 'Скрыть пароль' : 'Показать пароль');
 });
 
-form.addEventListener('submit', (event) => {
+let submitting = false;
+form.addEventListener('submit', async (event) => {
     event.preventDefault();
     message.hidden = false;
-    message.textContent = 'Вход пока недоступен. Обратитесь к организаторам через раздел «Контакты».';
+    const config = window.tarhanParticipant;
+    if (!config) { message.textContent = 'Вход пока не подключён к серверу.'; return; }
+    if (submitting || !form.reportValidity()) return;
+    submitting = true;
+    const button = form.querySelector('[type="submit"]');
+    button.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+    message.textContent = 'Входим…';
+    try {
+        const response = await fetch(config.endpoint + 'auth/login', {
+            method: 'POST', credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json', 'X-Tarhan-Token': config.token },
+            body: JSON.stringify({ email: form.elements.username.value, password: password.value })
+        });
+        const data = await response.json();
+        if (!response.ok || !data.success) throw new Error(data.message || 'Не удалось войти. Повторите позже.');
+        password.value = '';
+        location.assign(data.redirect);
+    } catch (error) { message.textContent = error.message; }
+    finally { submitting = false; button.disabled = false; form.removeAttribute('aria-busy'); }
 });

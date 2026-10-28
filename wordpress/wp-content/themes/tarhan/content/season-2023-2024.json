@@ -1,0 +1,233 @@
+{
+    "period": "2023–2024",
+    "cover": "src/assets/photo/seasons/2023-2024/1.jpeg",
+    "final_date": "",
+    "results_text": "",
+    "stages": [
+        {
+            "label": "1/8 финала — 8 игр"
+        },
+        {
+            "label": "1/4 финала — 4 игры"
+        },
+        {
+            "label": "1/2 финала — 2 игры"
+        },
+        {
+            "label": "Финал — 1 игра"
+        }
+    ],
+    "watch": [
+        {
+            "label": "YOUTUBE",
+            "url": "https://www.youtube.com/c/ДКдневник"
+        },
+        {
+            "label": "РУТУБ",
+            "url": "https://rutube.ru/channel/26853019/"
+        },
+        {
+            "label": "Видео сезона",
+            "url": "https://vkvideo.ru/video238817253_456239804"
+        }
+    ],
+    "gallery": [
+        {
+            "image": "src/assets/photo/seasons/2023-2024/1.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/1.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 1"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/2.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/2.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 2"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/3.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/3.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 3"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/4.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/4.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 4"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/5.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/5.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 5"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/6.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/6.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 6"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/7.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/7.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 7"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/8.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/8.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 8"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/9.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/9.jpeg",
+            "alt": "Сезон 2023–2024. Фотография 9"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/11.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/11.jpg",
+            "alt": "Сезон 2023–2024. Фотография 11"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/12.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/12.jpg",
+            "alt": "Сезон 2023–2024. Фотография 12"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/13.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/13.jpg",
+            "alt": "Сезон 2023–2024. Фотография 13"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/14.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/14.jpg",
+            "alt": "Сезон 2023–2024. Фотография 14"
+        },
+        {
+            "image": "src/assets/photo/seasons/2023-2024/15.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/15.jpg",
+            "alt": "Сезон 2023–2024. Фотография 15"
+        }
+    ],
+    "media": [
+        {
+            "label": "Журнал «КАЗАНЬ» (Как Минтимер Шаймиев «тархановцев» экзаменовал)",
+            "url": "https://kazan-journal.ru/news/novosti/kak-mintimer-saimiev-tarxanovcev-ekzamenoval"
+        },
+        {
+            "label": "Реальное Время (Илюза Исхакова: «Участие в конкурсе — ценный опыт, даже не знаю, смогу ли получить подобный еще раз»)",
+            "url": "https://realnoevremya.ru/articles/299210-ilyuza-ishakova-uchastie-v-konkurse-cennyy-opyt?erid=2SDnjboZHov"
+        },
+        {
+            "label": "Портал Московский комсомолец в Казани (Cъемки третьего сезона конкурса «Тархан» организуют в Казани)",
+            "url": "https://kazan.mk.ru/culture/2024/02/06/cemki-tretego-sezona-konkursa-tarkhan-organizuyut-v-kazani.html"
+        },
+        {
+            "label": "БезФормата (В Болгаре впервые пройдёт финал историко-культурного конкурса «Тархан»)",
+            "url": "https://bolgar.bezformata.com/listnews/istoriko-kulturnogo-konkursa-tarhan/130240773/"
+        },
+        {
+            "label": "МИЛЛИАРД ТАТАР («Я планирую поступать в КФУ, а моя мечта – стать историком-востоковедом»: как конкурс «Тархан» открывает таланты)",
+            "url": "https://milliard.tatar/news/ya-planiruyu-postupat-v-kfu-a-moya-mecta-stat-istorikom-vostokovedom-kak-konkurs-tarxan-otkryvaet-talanty-4679"
+        },
+        {
+            "label": "ТАТАРинформ (В Казани пройдут съемки третьего сезона историко-культурного конкурса «Тархан»)",
+            "url": "https://www.tatar-inform.ru/news/v-kazani-proidut-semki-tretego-sezona-istoriko-kulturnogo-konkursa-tarxan-5934791"
+        },
+        {
+            "label": "ТАТАРинформ (В Татарстане завершили съемки четвертьфинала конкурса «Тархан»)",
+            "url": "https://www.tatar-inform.ru/news/v-tatarstane-zaversili-semki-cetvertfinala-konkursa-tarxan-5939773"
+        },
+        {
+            "label": "ТАТАРинформ (Школьники из Татарстана прошли в финал историко-культурного конкурса «Тархан»)",
+            "url": "https://www.tatar-inform.ru/news/skolniki-iz-tatarstana-prosli-v-final-istoriko-kulturnogo-konkursa-tarxan-5942658"
+        },
+        {
+            "label": "ТАТАРинформ (В городе Болгар проходит финал телеигры «Тархан-3»)",
+            "url": "https://www.tatar-inform.ru/news/v-gorode-bolgar-proxodit-final-teleigry-tarxan-3-5943957"
+        },
+        {
+            "label": "ТАТАРинформ («Тархан» расширяет географию: в финал прошли учащиеся из Татарстана, Саратова и Астрахани)",
+            "url": "https://www.tatar-inform.ru/news/tarxan-rassiryaet-geografiyu-v-final-prosli-ucashhiesya-iz-tatarstana-saratova-i-astraxani-5936179"
+        },
+        {
+            "label": "Портал Министерства культуры РТ (В Древнем городе Болгар прошли съёмки финала III сезона историко-культурного конкурса «Тархан»)",
+            "url": "https://mincult.tatarstan.ru/index.htm/news/2301418.htm"
+        }
+    ],
+    "intro": "История России, тюркских народов и родного края — темы конкурса для старшеклассников. Главный приз — бесплатное обучение в Казанском федеральном университете. Призовое направление в Институте международных отношений, истории и востоковедения — «История тюркских народов».",
+    "stats": [
+        {
+            "value": "280",
+            "label": "заявок"
+        },
+        {
+            "value": "16",
+            "label": "районов Татарстана; также Саратов и Астрахань"
+        },
+        {
+            "value": "Более 300",
+            "label": "вопросов"
+        },
+        {
+            "value": "Более 20",
+            "label": "экспертов"
+        }
+    ],
+    "process_before": "Телевизионные игры проходили по олимпийской системе: участники с наименьшим количеством баллов выбывали. Каждая игра включала компьютерную викторину «Время вариантов», тур на скорость принятия решения «Время выбора» и творческий конкурс «Твоё время».",
+    "process_after": "Ведущий — доктор исторических наук Раиль Равилович Фахрутдинов, исполняющий обязанности директора Института международных отношений, истории и востоковедения КФУ.\n\nФинал состоялся в городе Болгар, древней столице Волжской Булгарии, в Музее болгарской цивилизации.\n\nК участникам с приветственным словом обратился Государственный советник Республики Татарстан Минтимер Шарипович Шаймиев.",
+    "jury": [
+        {
+            "name": "Ирада Аюпова",
+            "role": "Министр культуры Республики Татарстан"
+        },
+        {
+            "name": "Тимерхан Алишев",
+            "role": "Проректор КФУ"
+        },
+        {
+            "name": "Радик Салихов",
+            "role": "Директор Института истории имени Марджани"
+        },
+        {
+            "name": "Искандер Измайлов",
+            "role": "Историк"
+        },
+        {
+            "name": "Айрат Тухватуллин",
+            "role": "Историк"
+        }
+    ],
+    "finalists": [
+        {
+            "name": "Яхъя Зарипов",
+            "city": "Казань",
+            "result": "1 место"
+        },
+        {
+            "name": "Ания Мирзегалямова",
+            "city": "Сабинский район",
+            "result": "Разделённые 2 и 3 места"
+        },
+        {
+            "name": "Искандер Бадиги",
+            "city": "Казань",
+            "result": "Разделённые 2 и 3 места"
+        },
+        {
+            "name": "Сюмбель Салахутдинова",
+            "city": "Мамадыш",
+            "result": "Финалист"
+        },
+        {
+            "name": "Альмира Зиятдинова",
+            "city": "Казань",
+            "result": "Финалист"
+        },
+        {
+            "name": "Камилла Нутфуллина",
+            "city": "Зеленодольск",
+            "result": "Финалист"
+        }
+    ],
+    "source": "https://www.tarhan-history.ru/2023_2024/",
+    "source_sha256": "618223e8cc28a80638cf42c7e65e5c7d5d1ad7ad76d80050eb2c9d1850a9e2b2",
+    "watch_text": "Телеверсия конкурса выходила по воскресеньям на ТНВ.",
+    "unavailable_images": [
+        "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/10.jpeg"
+    ]
+}

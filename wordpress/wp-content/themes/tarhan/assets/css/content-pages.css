@@ -1,0 +1,13 @@
+.tarhan-content-intro { max-width: 760px; text-align: center; line-height: 1.6; }
+.tarhan-person:not([data-reveal]), .tarhan-season-card:not([data-reveal]) { opacity: 1; visibility: visible; transform: none; animation: none; }
+.tarhan-person p + p { margin-top: 12px; }
+.tarhan-person :is(h2,p), .season :is(h1,h2,h3,p,dd,a) { overflow-wrap: anywhere; }
+.tarhan-person--no-photo { min-height: 0; }
+.season__stats { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+@media (prefers-reduced-motion: reduce) {
+    .tarhan-person, .tarhan-season-card { opacity: 1; visibility: visible; transform: none; animation: none; }
+}
+@media (max-width: 576px) {
+    .tarhan-person--no-photo { grid-template-columns: 1fr; }
+    .jury-main__switch, .ambassadors-main__switch { flex-wrap: wrap; justify-content: center; }
+}

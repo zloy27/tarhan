@@ -1,0 +1,232 @@
+{
+    "period": "2024–2025",
+    "cover": "src/assets/photo/seasons/2024-2025/1.jpg",
+    "final_date": "",
+    "results_text": "",
+    "stages": [
+        {
+            "label": "1/8 финала — 8 игр"
+        },
+        {
+            "label": "1/4 финала — 4 игры"
+        },
+        {
+            "label": "1/2 финала — 2 игры"
+        },
+        {
+            "label": "Финал — 1 игра"
+        }
+    ],
+    "watch": [
+        {
+            "label": "РУТУБ",
+            "url": "https://rutube.ru/plst/899969?r=wd"
+        },
+        {
+            "label": "ВК",
+            "url": "https://vkvideo.ru/playlist/-214070047_7"
+        },
+        {
+            "label": "Видео сезона",
+            "url": "https://vkvideo.ru/video-214070047_456239489"
+        }
+    ],
+    "gallery": [
+        {
+            "image": "src/assets/photo/seasons/2024-2025/1.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/1.jpg",
+            "alt": "Сезон 2024–2025. Фотография 1"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/2.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/2.jpg",
+            "alt": "Сезон 2024–2025. Фотография 2"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/3.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/3.jpg",
+            "alt": "Сезон 2024–2025. Фотография 3"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/4.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/4.jpg",
+            "alt": "Сезон 2024–2025. Фотография 4"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/5.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/5.jpg",
+            "alt": "Сезон 2024–2025. Фотография 5"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/6.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/6.jpg",
+            "alt": "Сезон 2024–2025. Фотография 6"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/7.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/7.jpg",
+            "alt": "Сезон 2024–2025. Фотография 7"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/8.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/8.jpg",
+            "alt": "Сезон 2024–2025. Фотография 8"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/9.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/9.jpg",
+            "alt": "Сезон 2024–2025. Фотография 9"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/10.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/10.jpg",
+            "alt": "Сезон 2024–2025. Фотография 10"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/11.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/11.jpg",
+            "alt": "Сезон 2024–2025. Фотография 11"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/12.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/12.jpg",
+            "alt": "Сезон 2024–2025. Фотография 12"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/13.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/13.jpg",
+            "alt": "Сезон 2024–2025. Фотография 13"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/14.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/14.jpg",
+            "alt": "Сезон 2024–2025. Фотография 14"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/15.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/15.jpg",
+            "alt": "Сезон 2024–2025. Фотография 15"
+        },
+        {
+            "image": "src/assets/photo/seasons/2024-2025/16.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2024_2025_photos/16.jpg",
+            "alt": "Сезон 2024–2025. Фотография 16"
+        }
+    ],
+    "media": [
+        {
+            "label": "ТАТАРинформ (В театре Камала прошел финал IV сезона конкурса «Тархан»)",
+            "url": "https://www.tatar-inform.ru/news/v-teatre-kamala-prosel-final-iv-sezona-konkursa-tarxan-5981918"
+        },
+        {
+            "label": "Портал Министерства культуры РТ (Финал IV сезона историко-культурного конкурса «Тархан» пройдет в новом здании театра Г.Камала)",
+            "url": "https://mincult.tatarstan.ru/index.htm/news/2408737.htm"
+        },
+        {
+            "label": "Сайт КФУ (Финальный этап IV сезона историко-культурного конкурса \"Тархан\" успешно завершен)",
+            "url": "https://kpfu.ru/imoiv/finalnyj-etap-iv-sezona-istoriko-kulturnogo-465884.html"
+        },
+        {
+            "label": "Миллиард Татр (Четвертый «Тархан»: кто стал главными татарстанским умником и умницей?)",
+            "url": "https://milliard.tatar/news/cetvertyi-tarxan-kto-stal-glavnymi-tatarstanskim-umnikom-i-umnicei-7381"
+        },
+        {
+            "label": "Сайт КФУ (Телевизионный конкурс \"Тархан\" стал победителем в номинации \"Лучший популяризатор татарской культуры\" проекта Миллиард.Татар)",
+            "url": "https://kpfu.ru/imoiv/televizionnyj-konkurs-39tarhan39-stal-pobeditelem.html"
+        },
+        {
+            "label": "Миллиард Татр (В Казани пройдут съемки 1/4 финала четвертого сезона конкурса «Тархан»)",
+            "url": "https://www.tatar-inform.ru/news/v-kazani-proidut-semki-14-finala-cetvertogo-sezona-konkursa-tarxan-5976389"
+        },
+        {
+            "label": "ТАТАРинформ (Назван победитель IV сезона конкурса «Тархан»)",
+            "url": "https://www.tatar-inform.ru/news/nazvan-pobeditel-iv-sezona-konkursa-tarxan-5981920"
+        },
+        {
+            "label": "Портал Министерства культуры РТ (Стартуют съёмки IV сезона историко-культурного конкурса «Тархан»)",
+            "url": "https://mincult.tatarstan.ru/index.htm/news/2384474.htm"
+        },
+        {
+            "label": "Портал Министерства образования и науки РТ (Школьники из Татарстана прошли в финал историко-культурного конкурса «Тархан»)",
+            "url": "https://mon.tatarstan.ru/index.htm/news/2296952.htm"
+        }
+    ],
+    "intro": "История России, тюркских народов и родного края — темы конкурса для старшеклассников. Главный приз — бесплатное обучение в Казанском федеральном университете. Призовые направления в Институте международных отношений, истории и востоковедения — «История тюркских народов» и «История и экономика тюркских народов».",
+    "stats": [
+        {
+            "value": "Более 500",
+            "label": "заявок"
+        },
+        {
+            "value": "20",
+            "label": "районов Татарстана"
+        },
+        {
+            "value": "Более 300",
+            "label": "вопросов"
+        },
+        {
+            "value": "Более 20",
+            "label": "экспертов"
+        }
+    ],
+    "process_before": "Телевизионные игры проходили по олимпийской системе: участники с наименьшим количеством баллов выбывали. Каждая игра включала компьютерную викторину «Время вариантов», тур на скорость принятия решения «Время выбора» и творческий конкурс «Твоё время».",
+    "process_after": "Ведущий — доктор исторических наук Раиль Равилович Фахрутдинов, исполняющий обязанности директора Института международных отношений, истории и востоковедения КФУ.\n\nФинал состоялся в новом здании театра имени Галиаскара Камала — одного из старейших национальных театров, которому в 2026 году исполняется 120 лет.\n\nК участникам с приветственным словом обратился Государственный советник Республики Татарстан Минтимер Шарипович Шаймиев.",
+    "jury": [
+        {
+            "name": "Ирада Аюпова",
+            "role": "Министр культуры Республики Татарстан"
+        },
+        {
+            "name": "Радик Салихов",
+            "role": "Директор Института истории Академии наук РТ"
+        },
+        {
+            "name": "Тимерхан Алишев",
+            "role": "Проректор КФУ по внешним связям"
+        },
+        {
+            "name": "Айрат Ситдиков",
+            "role": "Директор Института археологии имени Альфреда Халикова АН РТ"
+        },
+        {
+            "name": "Айрат Тухватулин",
+            "role": "Доцент кафедры исторического и обществоведческого образования ИМОИиВ КФУ"
+        }
+    ],
+    "finalists": [
+        {
+            "name": "Алсу Абдиева",
+            "city": "Сармановский район",
+            "result": "1 место"
+        },
+        {
+            "name": "Диля Зубаерова",
+            "city": "Арск",
+            "result": "2 место"
+        },
+        {
+            "name": "Альфир Кадыров",
+            "city": "Набережные Челны",
+            "result": "3 место"
+        },
+        {
+            "name": "София Садыкова",
+            "city": "Зеленодольск",
+            "result": "Финалист"
+        },
+        {
+            "name": "Билал Сагитов",
+            "city": "Елабуга",
+            "result": "Финалист"
+        },
+        {
+            "name": "Алиса Хазиева",
+            "city": "Арск",
+            "result": "Финалист"
+        }
+    ],
+    "source": "https://www.tarhan-history.ru/2024_2025/",
+    "source_sha256": "b9c3a0bc906c32a30a61b1294cc3100f80947248c719f31d74c4c037323832b7",
+    "watch_text": "Телеверсия конкурса выходила по воскресеньям на ТНВ. Трансляции также проходили на UNIVER TV."
+}

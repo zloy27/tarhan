@@ -1,0 +1,13 @@
+.tarhan-organizer-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 24px 0; }
+.tarhan-organizer-filters label { display: flex; flex-direction: column; gap: 5px; max-width: 100%; }
+.tarhan-organizer-filters input, .tarhan-organizer-filters select { max-width: 100%; }
+.tarhan-organizer-filters input[name="search"] { width: 390px; }
+.tarhan-organizer-scroll { overflow-x: auto; margin: 20px 0; }
+.tarhan-organizer-scroll table { min-width: 1000px; }
+.tarhan-organizer-scroll td { overflow-wrap: anywhere; }
+.tarhan-organizer-detail { max-width: 1000px; }
+.tarhan-organizer-detail th { width: 35%; }
+.tarhan-organizer-detail td { white-space: pre-wrap; overflow-wrap: anywhere; }
+.tarhan-organizer-essay { max-width: 960px; white-space: pre-wrap; overflow-wrap: anywhere; padding: 20px; background: white; }
+.tarhan-organizers .page-numbers { display: inline-block; padding: 7px 11px; margin: 3px; background: white; }
+@media (max-width: 600px) { .tarhan-organizer-filters label { width: 100%; } .tarhan-organizer-filters input[name="search"] { width: 100%; } }

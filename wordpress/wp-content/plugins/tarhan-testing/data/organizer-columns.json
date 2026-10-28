@@ -1,0 +1,17 @@
+[
+ ["id","ID участника","text",14],
+ ["full_name","ФИО участника","text",42],
+ ["result","Результат последнего завершённого теста","text",26], ["score","Баллы","number",12], ["percent","Результат, %","percent",15],
+ ["attempts_used","Начато попыток","number",15], ["attempts_remaining","Осталось попыток","number",16], ["last_number","Номер последней завершённой попытки","number",20],
+ ["current_state","Текущая попытка","text",32], ["essay_state","Эссе","text",20], ["essay_date","Дата сдачи эссе","datetime",21],
+ ["essay_name","Документ эссе","text",30], ["essay_url","Скачать эссе","link",24],
+ ["consent_state","Согласие","text",20], ["consent_name","Файл согласия","text",30], ["consent_url","Открыть согласие","link",24],
+ ["email","Email","text",32], ["phone","Телефон","text",22], ["birth_date","Дата рождения","date",17], ["minor","Несовершеннолетний при регистрации","text",24],
+ ["region","Регион","text",32], ["district","Район","text",30], ["locality","Населённый пункт","text",30], ["street","Улица","text",28], ["house","Дом","text",16], ["apartment","Квартира","text",14],
+ ["school_form","Форма учреждения","text",19], ["school_type","Тип учреждения","text",20], ["school_number","Номер учреждения","text",19], ["education","Категория участника","text",22],
+ ["parent_full_name","ФИО представителя","text",42], ["parent_phone","Телефон представителя","text",24],
+ ["registered_at","Дата регистрации","datetime",21], ["participation_year","Год участия","number",16], ["rules_accepted_at","Ознакомление с положением","datetime",24],
+ ["attempt_1","Попытка 1: статус, баллы, дата","text",48], ["attempt_2","Попытка 2: статус, баллы, дата","text",48], ["attempt_3","Попытка 3: статус, баллы, дата","text",48],
+ ["profile_url","Карточка участника","link",24], ["season_name","Сезон","text",24],
+ ["teacher_name","ФИО преподавателя","text",36], ["teacher_phone","Телефон преподавателя","text",24]
+]

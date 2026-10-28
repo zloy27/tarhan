@@ -7,9 +7,9 @@
         @include flex-row;
         justify-content: space-between;
         align-items: center;
-        flex: 0 1 455px;
-        gap: clamp(18px, 2vw, 28px);
-        max-width: 455px;
+        flex: 0 0 540px;
+        gap: clamp(24px, 2.5vw, 32px);
+        max-width: 100%;
         width: 100%;
         max-height: none;
     }
@@ -27,6 +27,7 @@
         align-items: center;
         justify-content: space-between;
         flex: 1 1 520px;
+        min-width: 0;
         gap: clamp(18px, 2vw, 28px);
         width: 100%;
         max-width: 520px;
@@ -82,14 +83,18 @@
 
 
     &__nav {
-        @include flex-row-space-between;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        align-items: start;
+        justify-content: start;
+        column-gap: clamp(24px, 3vw, 40px);
 
         &--box {
             display: flex;
             flex-direction: column;
-            flex: 0 1 200px;
-            width: 100%;
-            max-width: 200px;
+            flex: 0 0 auto;
+            width: auto;
+            max-width: none;
 
 
         }
@@ -157,7 +162,7 @@
         color: var(--base-color-black);
         line-height: 1.5;
         overflow-wrap: anywhere;
-        white-space: nowrap;
+        white-space: normal;
 
     }
 
@@ -261,7 +266,7 @@
 
         &__general {
             display: grid;
-            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            grid-template-columns: 1fr;
             align-items: start;
             gap: clamp(28px, 6vw, 54px);
         }
@@ -285,7 +290,7 @@
 
         &__details {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(190px, 0.9fr);
+            grid-template-columns: max-content minmax(0, 1fr);
             align-items: start;
             gap: 28px;
         }
@@ -314,7 +319,7 @@
 
         &__details {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(210px, 1fr);
+            grid-template-columns: max-content minmax(0, 1fr);
             align-items: start;
         }
 
@@ -328,6 +333,15 @@
 
         &__sponsers img {
             max-height: 30px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        &__details {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 28px;
         }
     }
 
@@ -381,10 +395,11 @@
         }
 
         &__nav {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             align-items: flex-start;
             flex-direction: row;
             justify-content: flex-start;
-            gap: clamp(24px, 10vw, 52px);
+            gap: 24px;
         }
 
         &__nav--box {

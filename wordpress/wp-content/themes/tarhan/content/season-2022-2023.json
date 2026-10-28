@@ -1,0 +1,288 @@
+{
+    "period": "2022–2023",
+    "cover": "src/assets/photo/seasons/2022-2023/1.jpg",
+    "final_date": "",
+    "results_text": "Финальная игра продолжалась почти два часа. Дмитрий Таюрский пригласил всех шестерых финалистов учиться в Институте международных отношений КФУ по направлению «История тюркских народов».",
+    "stages": [],
+    "watch": [
+        {
+            "label": "YOUTUBE",
+            "url": "https://www.youtube.com/c/ДКдневник"
+        },
+        {
+            "label": "РУТУБ",
+            "url": "https://rutube.ru/channel/26853019/"
+        },
+        {
+            "label": "Видео сезона",
+            "url": "https://www.youtube.com/watch?v=DA35mJo1F6A"
+        }
+    ],
+    "gallery": [
+        {
+            "image": "src/assets/photo/seasons/2022-2023/1.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/1.jpg",
+            "alt": "Сезон 2022–2023. Фотография 1"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/2.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/2.jpg",
+            "alt": "Сезон 2022–2023. Фотография 2"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/3.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/3.jpg",
+            "alt": "Сезон 2022–2023. Фотография 3"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/4.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/4.jpg",
+            "alt": "Сезон 2022–2023. Фотография 4"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/5.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/5.jpg",
+            "alt": "Сезон 2022–2023. Фотография 5"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/6.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/6.jpg",
+            "alt": "Сезон 2022–2023. Фотография 6"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/7.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/7.jpg",
+            "alt": "Сезон 2022–2023. Фотография 7"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/8.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/8.jpg",
+            "alt": "Сезон 2022–2023. Фотография 8"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/10.jpeg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/10.jpeg",
+            "alt": "Сезон 2022–2023. Фотография 10"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/12.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/12.jpg",
+            "alt": "Сезон 2022–2023. Фотография 12"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/13.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/13.jpg",
+            "alt": "Сезон 2022–2023. Фотография 13"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/14.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/14.jpg",
+            "alt": "Сезон 2022–2023. Фотография 14"
+        },
+        {
+            "image": "src/assets/photo/seasons/2022-2023/15.jpg",
+            "source": "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/15.jpg",
+            "alt": "Сезон 2022–2023. Фотография 15"
+        }
+    ],
+    "media": [
+        {
+            "label": "Завершается прием заявок на конкурс «Тархан. Ведущим второго сезона станет завкафедрой КФУ Раиль Фахрутдинов",
+            "url": "https://media.kpfu.ru/news/zavershaetsya-priem-zayavok-na-konkurs-tarkhan-s-besplatnym-postupleniem-v-kfu"
+        },
+        {
+            "label": "Начались съемки очного телевизионного тура второго сезона историко-культурного конкурса «Тархан»",
+            "url": "https://kpfu.ru/imoiv/nachalis-semki-ochnogo-televizionnogo-tura-425636.html"
+        },
+        {
+            "label": "Портал Ассоциации учителей истории и обществознания пишет о начале съемок телевизионного этапа",
+            "url": "http://schoolhistorians.ru/istoriko-kulturnyj-konkurs-tarhan.html"
+        },
+        {
+            "label": "Татар-информ (Победители историко-культурного конкурса «Тархан» будут учиться в ИМО КФУ бесплатно)",
+            "url": "https://www.tatar-inform.ru/news/pobediteli-telekonkursa-tyurkskoi-istorii-tarxan-budut-prinyaty-na-byudzet-imo-kfu-5896429"
+        },
+        {
+            "label": "ДЗЕН Национальной библиотеки РТ («Тархан»: книжные рекомендации)",
+            "url": "https://dzen.ru/a/Y-9HqTaxNxeml72v"
+        },
+        {
+            "label": "Портал КФУ (Ефим Пивовар вошел в состав жюри конкурса «Тархан», который проходит при участии КФУ)",
+            "url": "https://media.kpfu.ru/news/pobediteli-telekonkursa-tarkhan-stanut-studentami-kfu"
+        },
+        {
+            "label": "Портал ИМО КФУ (Президент РГГУ Ефим Пивовар: «Тархан» - блестящая находка и настоящее открытие для меня)",
+            "url": "https://kpfu.ru/imoiv/telekonkurs-tarhan-novaya-stranica-tjurkskoj.html"
+        },
+        {
+            "label": "Медиапортал КФУ (Названы победители второго сезона конкурса «Тархан»)",
+            "url": "https://media.kpfu.ru/news/nazvan-pobeditel-vtorogo-sezona-konkursa-tarkhan-proshedshiy-pri-uchastii-kfu"
+        },
+        {
+            "label": "Татмедиа Зеленодольский район (Зеленодольская старшеклассница стала финалисткой конкурса и получила право поступления в КФУ)",
+            "url": "https://zpravda.ru/news/novosti/zelenodolskaia-starseklassnica-stala-finalistkoi-konkursa-i-polucila-pravo-postupleniia-v-kfu"
+        },
+        {
+            "label": "Портал Сабинского района (Конкурс «Тархан»)",
+            "url": "https://saby.tatarstan.ru/index.htm/news/2179073.htm"
+        },
+        {
+            "label": "Портал Министерства образования РТ (Названы победители второго сезона конкурса «Тархан»)",
+            "url": "https://mon.tatarstan.ru/index.htm/news/2179308.htm"
+        },
+        {
+            "label": "Статья на портале ИМО КФУ (II сезон историко-культурного конкурса «Тархан»: самое интересное впереди)",
+            "url": "https://kpfu.ru/imoiv/ii-sezon-istoriko-kulturnogo-konkursa-39tarhan39.html"
+        },
+        {
+            "label": "Статья на сайте Министерства культуры РТ (Финальные игры II сезона историко-культурного конкурса «Тархан»)",
+            "url": "https://mincult.tatarstan.ru/index.htm/news/2204964.htm"
+        },
+        {
+            "label": "Татар-информ (Победители и призеры телеигры «Тархан» смогут поступить на бюджет КФУ)",
+            "url": "https://www.tatar-inform.ru/news/pobediteli-i-prizery-teleigry-tarxan-smogut-postupit-na-byudzet-kfu-5909325"
+        },
+        {
+            "label": "Интернет-журнал Магариф (На телеканале ТНВ состоится показ финала историко-культурного конкурса «Тархан»)",
+            "url": "https://magarif-uku.ru/ru/na-telekanale-tnv-sostoitsya-pokaz-f/"
+        },
+        {
+            "label": "Статья на сайте Министерства культуры РТ (Финал игры II сезона историко-культурного конкурса «Тархан»)",
+            "url": "https://mincult.tatarstan.ru/index.htm/news/2208175.htm"
+        },
+        {
+            "label": "Татар-информ («Опыт, который стоит пережить»: победитель и призеры игры «Тархан» поступят на бюджет КФУ, 23 июня 2023)",
+            "url": "https://www.tatar-inform.ru/news/opyt-kotoryi-stoit-perezit-pobeditel-i-prizery-igry-tarxan-postupyat-na-byudzet-kfu-5910308"
+        },
+        {
+            "label": "Татмедиа Ютазинский район (Ютазинские школьники прошли отборочный тур в конкурсе по истории, 8 февраля 2023)",
+            "url": "https://yutazy.ru/news/obrazovanie/bairiakinskie-skolniki-prosli-otborocnyi-tur-v-konkurse-po-istorii"
+        },
+        {
+            "label": "Татмедиа Аксубаевский район (Аксубаевский школьник – в ¼ финала интеллектуального конкурса, 8 февраля 2023)",
+            "url": "https://aksubayevo.ru/news/news/aksubaevskii-skolnik-v-14-finala-intellektualnogo-konkursa"
+        },
+        {
+            "label": "Информация на портале Сармановского района (Телевизионный историко-культурный конкурс «Тархан» 9 февраля 2023)",
+            "url": "https://sarmanovo.tatarstan.ru/index.htm/news/2166042.htm"
+        },
+        {
+            "label": "Татмедиа Буинский район (Победители и призеры телеигры «Тархан» смогут поступить на бюджет КФУ)",
+            "url": "https://buinsk-tat.ru/news/vchera-segodnya-zavtra/pobediteli-i-prizery-teleigry-tarxan-smogut-postupit-na-biudzett-kfu"
+        },
+        {
+            "label": "Татмедиа Нурлатский район (Школьники – победители телеигры «Тархан» будут зачислены в КФУ на бюджет)",
+            "url": "https://nurlat-tat.ru/news/novosti/skolniki-pobediteli-teleigry-tarxan-budut-zacisleny-v-kfu-na-biudzett"
+        },
+        {
+            "label": "Татмедиа Дрожжановский район (Победители и призеры телеигры «Тархан» смогут поступить на бюджет КФУ)",
+            "url": "https://chuprale-online.ru/news/v-respublike/pobediteli-i-prizery-teleigry-konkursa-tarxan-budut-zacisleny-na-biudzett-v-kfu"
+        },
+        {
+            "label": "Татмедиа Новошешминский район (Победители и призеры историко-культурного конкурса «Тархан» смогут поступить на бюджет КФУ)",
+            "url": "https://novoshishminsk.ru/news/v-respublike/pobediteli-i-prizery-istoriko-kulturnogo-konkursa-tarxan-smogut-postupit-na-biudzett-kfu"
+        },
+        {
+            "label": "Татмедиа Верхний Услон (Победители и призеры телеигры «Тархан» смогут поступить на бюджет КФУ)",
+            "url": "https://vuslon.ru/news/obschestvo/pobediteli-i-prizery-teleigry-tarxan-smogut-postupit-na-biudzett-kfu"
+        },
+        {
+            "label": "Татмедиа Кайбицкий район (Победители и призеры телеигры «Тархан» смогут поступить на бюджет КФУ)",
+            "url": "https://kaibicy.ru/news/novosti/pobediteli-i-prizery-teleigry-tarxan-smogut-postupit-na-biudzett-kfu"
+        },
+        {
+            "label": "Татмедиа г.Лаишево (Участники телеигры «Тархан» будут состязаться за право поступить на бюджет в КФУ)",
+            "url": "http://laishevskyi.ru/news/tag/list/teleigra-tarxan"
+        },
+        {
+            "label": "Татмедиа Пестречинский район (Победители и призеры телеигры «Тархан» смогут поступить на бюджет КФУ)",
+            "url": "http://pestrecy-rt.ru/news/v-respublike/pobediteli-i-prizery-teleigry-tarxan-smogut-postupit-na-biudzett-kfu"
+        },
+        {
+            "label": "Татмедиа Тетюшский район (Победитель и два призера телеигры «Тархан» смогут поступить на бюджет КФУ)",
+            "url": "https://tetyushy.ru/news/obshchestvo/pobeditel-i-dva-prizera-teleigry-tarxan-smogut-postupit-na-biudzett-kfu"
+        }
+    ],
+    "intro": "Второй сезон историко-культурного конкурса «Тархан» объединил школьников Татарстана и Республики Башкортостан. Участники боролись за возможность стать студентами КФУ.",
+    "stats": [
+        {
+            "value": "Более 300",
+            "label": "заявок"
+        },
+        {
+            "value": "Около 150",
+            "label": "участников онлайн-тура"
+        },
+        {
+            "value": "40",
+            "label": "участников телевизионного этапа"
+        },
+        {
+            "value": "18",
+            "label": "районов Татарстана, а также Республика Башкортостан"
+        }
+    ],
+    "process_before": "Игры прошли от одной восьмой финала до финала. Вместе с ведущим, доктором исторических наук Раилем Равиловичем Фахрутдиновым, участники обсуждали исторические эпохи и персонажей.",
+    "process_after": "На играх прозвучало более 300 вопросов, участвовали более 20 экспертов — кандидатов и докторов исторических наук, специалистов по истории и культуре. Съёмочную площадку посетил Раис Татарстана Рустам Нургалеевич Минниханов: он познакомился с участниками и получил от ведущего талисман конкурса — фирменную пайдзу.",
+    "jury": [
+        {
+            "name": "Ирада Аюпова",
+            "role": "Министр культуры Республики Татарстан"
+        },
+        {
+            "name": "Дмитрий Таюрский",
+            "role": "Первый проректор КФУ"
+        },
+        {
+            "name": "Рамиль Хайрутдинов",
+            "role": "Директор Института международных отношений"
+        },
+        {
+            "name": "Алсу Асадуллина",
+            "role": "Заместитель министра образования"
+        },
+        {
+            "name": "Айрат Ситдиков",
+            "role": "Декан Высшей школы исторических наук и всемирного культурного наследия"
+        }
+    ],
+    "finalists": [
+        {
+            "name": "Илюза Исхакова",
+            "city": "Балтасинский район",
+            "result": "1 место"
+        },
+        {
+            "name": "Ильвина Нурмиева",
+            "city": "Сабинский район",
+            "result": "2 место"
+        },
+        {
+            "name": "Фарил Рахматуллин",
+            "city": "Актанышский район",
+            "result": "3 место"
+        },
+        {
+            "name": "Эмиль Сафин",
+            "city": "Зеленодольск",
+            "result": "4 место"
+        },
+        {
+            "name": "Адиля Хусаенова",
+            "city": "Казань",
+            "result": "5 место"
+        },
+        {
+            "name": "Зарина Фазульзянова",
+            "city": "Зеленодольск",
+            "result": "6 место"
+        }
+    ],
+    "source": "https://www.tarhan-history.ru/2022_2023/",
+    "source_sha256": "3c29719cadebd9061f8bea16930285c52c495636da2603c680a65784c9043d27",
+    "watch_text": "Телеверсия конкурса выходила по воскресеньям на ТНВ.",
+    "unavailable_images": [
+        "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/9.jpg",
+        "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/11.jpg"
+    ]
+}

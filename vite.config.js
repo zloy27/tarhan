@@ -24,6 +24,8 @@ export default defineConfig({
         participant: './participant.html',
         entrance: './entrance.html',
         registration: './registration.html',
+        privacyPolicy: './privacy-policy.html',
+        test: './test.html',
         forgotPassword: './forgot-password.html',
         resetPassword: './reset-password.html',
         notFound: './404.html',

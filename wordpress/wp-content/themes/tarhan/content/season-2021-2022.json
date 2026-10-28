@@ -1,0 +1,206 @@
+{
+    "period": "2021–2022",
+    "cover": "src/assets/photo/seasons/21-22.jpg",
+    "intro": "Первый сезон историко-культурного конкурса «Тархан»",
+    "process_before": "После серьёзного заочного отбора участники встретились в телевизионных играх.",
+    "process_after": "Игры проходили по олимпийской схеме, на выбывание: участники с наименьшим количеством баллов покидали конкурс, а остальные переходили в следующий тур.",
+    "final_date": "2022-03-16",
+    "results_text": "После почти двухчасовой игры эксперты определили победителя и троих призёров. Дмитрий Таюрский пригласил их стать студентами КФУ на направлении «История тюркских народов» Института международных отношений. Гордимся нашими ребятами!",
+    "watch_text": "Конкурс транслировался по воскресеньям на ТНВ. Все выпуски доступны на YouTube и Rutube.",
+    "stats": [
+        {
+            "value": "250+",
+            "label": "заявок"
+        },
+        {
+            "value": "32",
+            "label": "участника очного этапа"
+        },
+        {
+            "value": "12",
+            "label": "районов Татарстана"
+        }
+    ],
+    "stages": [
+        {
+            "label": "1/8 финала"
+        },
+        {
+            "label": "1/4 финала"
+        },
+        {
+            "label": "Полуфинал"
+        },
+        {
+            "label": "Финал"
+        }
+    ],
+    "jury": [
+        {
+            "name": "Ирада Аюпова",
+            "role": "Министр культуры Татарстана"
+        },
+        {
+            "name": "Дмитрий Таюрский",
+            "role": "Исполняющий обязанности ректора КФУ"
+        },
+        {
+            "name": "Айрат Ситдиков",
+            "role": "Декан Высшей школы исторических наук и всемирного культурного наследия Института международных отношений"
+        },
+        {
+            "name": "Раиль Фахрутдинов",
+            "role": "Заведующий кафедрой исторического и обществоведческого образования"
+        },
+        {
+            "name": "Мадина Тимерзянова",
+            "role": "Директор Национальной библиотеки"
+        }
+    ],
+    "finalists": [
+        {
+            "name": "Ильнур Амирханов",
+            "city": "Актаныш",
+            "result": "1 место"
+        },
+        {
+            "name": "Андрей Цапок",
+            "city": "Зеленодольск",
+            "result": "2 место"
+        },
+        {
+            "name": "Саид Сруров",
+            "city": "Казань",
+            "result": "3 место"
+        },
+        {
+            "name": "Лейсан Галиуллина",
+            "city": "Сарманово",
+            "result": "3 место"
+        },
+        {
+            "name": "Шамиль Ханов",
+            "city": "Агрызский район",
+            "result": "Финалист"
+        },
+        {
+            "name": "Данил Харисов",
+            "city": "Набережные Челны",
+            "result": "Финалист"
+        }
+    ],
+    "watch": [
+        {
+            "label": "YouTube",
+            "url": "https://www.youtube.com/c/ДКдневник"
+        },
+        {
+            "label": "Rutube",
+            "url": "https://rutube.ru/channel/26853019/"
+        }
+    ],
+    "gallery": [
+        {
+            "image": "src/assets/photo/seasons/2021-2022/1.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 1"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/2.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 2"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/3.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 3"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/4.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 4"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/5.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 5"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/6.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 6"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/7.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 7"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/13.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 8"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/14.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 9"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/15.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 10"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/16.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 11"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/17.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 12"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/18.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 13"
+        },
+        {
+            "image": "src/assets/photo/seasons/2021-2022/19.jpg",
+            "alt": "Сезон «Тархан» 2021–2022 — фотография 14"
+        }
+    ],
+    "media": [
+        {
+            "label": "Бизнес Online — интервью Ирады Аюповой о конкурсе и его значении для воспитания молодёжи",
+            "url": "https://www.business-gazeta.ru/article/553398"
+        },
+        {
+            "label": "UNIVER TV — сюжет о финале",
+            "url": "https://rutube.ru/video/7a4486e93a1377cba5da99f18d4adebe/"
+        },
+        {
+            "label": "ТНВ — сюжет о конкурсе",
+            "url": "https://vk.com/tarhan_konkurs?z=video-214070047_456239018%2F189a75b7774451c19d%2Fpl_wall_-214070047"
+        },
+        {
+            "label": "Татар-информ — как проходил конкурс",
+            "url": "https://www.tatar-inform.ru/news/molodez-dolzna-imet-ravnye-vozmoznosti-v-kazani-proxodit-konkurs-tarxan-5858531"
+        },
+        {
+            "label": "Видеосюжет на YouTube",
+            "url": "https://www.youtube.com/watch?v=wlliKgucYdY"
+        },
+        {
+            "label": "Татар-информ — об Ильнуре Амирханове",
+            "url": "https://tatar-inform.tatar/news/aktanysh-ukuchysy-tarhan-2022-tarihi-m-d-ni-konkursynda-i-de"
+        },
+        {
+            "label": "БЕZФОРМАТА — о финале",
+            "url": "https://kazan.bezformata.com/listnews/istoriko-kulturniy-konkurs-tarhan/103516981/"
+        },
+        {
+            "label": "Всемирный конгресс татар — о конкурсе",
+            "url": "https://tatar-congress.org/ru/blog/prodolzhaetsya-intellektualnaya-borba-na-istoriko-kulturnom-konkurse-tarhan/"
+        },
+        {
+            "label": "Новости Зеленодольска — об Андрее Цапке",
+            "url": "http://zpravda.ru/news/novosti/andrey-tsapok-pokoril-tarkhan-desyatiklassnika-iz-litseya-3-priglasili-na-uchebu-v-kfu"
+        },
+        {
+            "label": "Национальный музей РТ — этап финала",
+            "url": "https://tatmuseum.ru/news/muzej-dal-zadanie-finalistam-tv-konkursa_2022_06_16/"
+        },
+        {
+            "label": "Болгарский музей-заповедник — поездка финалистов",
+            "url": "https://vbolgar.ru/?p=26618"
+        }
+    ]
+}

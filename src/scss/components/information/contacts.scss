@@ -89,6 +89,23 @@
         }
     }
 
+    &__organization {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        min-height: 220px;
+        padding: 24px 0;
+        border-top: 1px solid color-mix(in srgb, var(--base-color-80) 65%, transparent);
+    }
+
+    &__organization-logo {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 420px;
+    }
+
     &__list {
         @include flex-column;
         gap: 24px;

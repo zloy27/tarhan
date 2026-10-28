@@ -1,0 +1,35 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { createRequire } from 'node:module';
+const require = createRequire(process.env.TARHAN_NODE_MODULES + '/package.json');
+const {Workbook, SpreadsheetFile} = require('@oai/artifact-tool');
+const root = process.cwd();
+const plugin = path.join(root, 'wordpress/wp-content/plugins/tarhan-testing');
+const columns = JSON.parse(await fs.readFile(path.join(plugin, 'data/organizer-columns.json'), 'utf8'));
+const letter = n => { let s=''; for(n++;n;n=Math.floor((n-1)/26)) s=String.fromCharCode(65+(n-1)%26)+s; return s; };
+const last = letter(columns.length-1);
+const workbook = Workbook.create();
+const sheet = workbook.worksheets.add('Участники');
+sheet.showGridLines = false;
+sheet.getRange(`A1:${last}5`).format.font = {name:'Arial',size:11,color:'#202020'};
+sheet.getRange('A1').values = [['Участники конкурса «Тархан»']];
+sheet.getRange('A1').format.font = {name:'Arial',size:15,bold:true};
+sheet.getRange('A2').values = [['Выгрузка из WordPress. Документы открываются после входа организатора.']];
+sheet.getRange('A2').format.font = {name:'Arial',size:10,italic:true,color:'#555555'};
+sheet.getRange(`A4:${last}4`).values = [columns.map(c=>c[1])];
+sheet.getRange(`A5:${last}5`).values = [columns.map(()=>null)];
+const table = sheet.tables.add(`A4:${last}5`,true,'Participants');
+table.style = 'TableStyleMedium2';
+sheet.getRange(`A4:${last}4`).format = {fill:'#70452F',font:{name:'Arial',size:11,bold:true,color:'#FFFFFF'},wrapText:true,horizontalAlignment:'center',verticalAlignment:'center',rowHeight:62};
+sheet.getRange(`A5:${last}5`).format = {verticalAlignment:'top',wrapText:true,rowHeight:48};
+for (let i=0;i<columns.length;i++) {
+ const c=columns[i], col=letter(i);
+ sheet.getRange(`${col}1:${col}5`).format.columnWidth=c[3];
+ sheet.getRange(`${col}5`).setNumberFormat(({text:'@',link:'@',number:'0',percent:'0.0%',date:'dd.mm.yyyy',datetime:'dd.mm.yyyy hh:mm'})[c[2]]);
+ if(c[2]==='link') sheet.getRange(`${col}5`).format.font={name:'Arial',size:11,color:'#17639A',underline:'single'};
+}
+sheet.freezePanes.freezeRows(4);
+workbook.recalculate();
+await fs.mkdir(path.join(plugin,'templates'),{recursive:true});
+await (await SpreadsheetFile.exportXlsx(workbook)).save(path.join(plugin,'templates/participants.xlsx'));
+console.log((await workbook.inspect({kind:'table',sheetId:'Участники',range:'A4:H5',maxChars:800,tableMaxRows:2,tableMaxCols:8})).ndjson);

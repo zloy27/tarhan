@@ -1,0 +1,10 @@
+.tarhan-editor { max-width: 960px; }
+.tarhan-field { display: grid; gap: 6px; margin: 14px 0; }
+.tarhan-field > label { font-weight: 600; }
+.tarhan-field input:not([type="hidden"]), .tarhan-field textarea { width: 100%; max-width: 100%; }
+.tarhan-group { margin: 28px 0; padding-top: 12px; border-top: 1px solid #ddd; }
+.tarhan-row { margin: 16px 0; padding: 16px; border: 1px solid #c3c4c7; background: #f9f9f9; border-radius: 5px; min-width: 0; }
+.tarhan-row legend { padding: 0 8px; font-weight: 600; }
+.tarhan-row-actions, .tarhan-image { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.tarhan-image img { width: 100px; height: 100px; object-fit: cover; }
+.tarhan-image img[hidden] { display: none; }

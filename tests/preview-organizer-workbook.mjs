@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+import {createRequire} from 'node:module';
+const require = createRequire(process.env.TARHAN_NODE_MODULES + '/package.json');
+const {SpreadsheetFile, FileBlob} = require('@oai/artifact-tool');
+const input = process.env.TARHAN_ORGANIZER_OUTPUT;
+const workbook = await SpreadsheetFile.importXlsx(await FileBlob.load(input));
+workbook.recalculate();
+const range = process.env.TARHAN_ORGANIZER_PREVIEW_RANGE || 'B4:I8';
+console.log((await workbook.inspect({kind:'table',sheetId:'Участники',range,maxChars:1800,tableMaxRows:5,tableMaxCols:8})).ndjson);
+const preview = await workbook.render({sheetName:'Участники',range,scale:1.2,format:'png'});
+await fs.writeFile(input + '.png',new Uint8Array(await preview.arrayBuffer()));
