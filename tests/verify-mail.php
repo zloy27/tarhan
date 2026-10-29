@@ -10,8 +10,9 @@ foreach (array($table, tarhan_attempts_table(), $wpdb->prefix . 'tarhan_enrollme
     $info = $wpdb->get_row($wpdb->prepare('SHOW TABLE STATUS WHERE Name=%s', $name));
     mail_check($info && strtoupper($info->Engine) === 'INNODB', 'Transactional storage required');
 }
-$mode = 'accepted'; $requests = 0;
-$transport = function ($pre, $args) use (&$mode, &$requests) {
+$mode = 'accepted'; $requests = 0; $sent = array();
+$transport = function ($pre, $args) use (&$mode, &$requests, &$sent) {
+    $sent[] = $args;
     $requests++;
     mail_check($args['to'] === 'participant@example.invalid', 'Wrong recipient');
     mail_check(str_contains($args['subject'], 'Тархан'), 'Missing subject');
@@ -63,6 +64,26 @@ try {
     tarhan_mail_enqueue('test:expired', $uid, $profile['email'], 'Тест');
     $wpdb->update($table, array('created_at' => time() - 2*DAY_IN_SECONDS), array('event_key' => 'test:expired'));
     $before = $requests; tarhan_mail_process(); mail_check($requests === $before, 'Stale message sent');
+    $templates = tarhan_mail_templates();
+    $templates['registration'] = array('subject' => 'Тархан — новая тема', 'body' => "Спасибо!\nТест: {test_url}");
+    $templates['failed']['body'] = 'Попыток: {remaining}. {attempts_message}';
+    mail_check(!is_wp_error(tarhan_mail_validate_templates($templates)), 'Valid templates rejected');
+    $bad = $templates; $bad['passed']['subject'] = '';
+    mail_check(is_wp_error(tarhan_mail_validate_templates($bad)), 'Empty subject accepted');
+    $bad = $templates; $bad['failed']['body'] = '{unknown}';
+    mail_check(is_wp_error(tarhan_mail_validate_templates($bad)), 'Unknown token accepted');
+    $custom = function () use (&$templates) { return $templates; };
+    add_filter('pre_option_tarhan_mail_templates', $custom);
+    mail_check(str_contains(tarhan_mail_message('failed', 0), 'Попыток: 0. Оставшихся попыток'), 'Zero attempts rendering');
+    $profile['season_id'] .= '-custom';
+    tarhan_mail_registration($uid, $profile);
+    $templates['registration']['subject'] = 'Тархан — последующая правка';
+    $templates['registration']['body'] = 'Другой текст';
+    $mode = 'accepted'; tarhan_mail_process();
+    $last = end($sent);
+    mail_check($last['subject'] === 'Тархан — новая тема' && $last['message'] === "Спасибо!\nТест: " . home_url('/test/'), 'Queued template snapshot or substitution broken');
+    remove_filter('pre_option_tarhan_mail_templates', $custom);
+    echo "PASS: editable templates, validation, URLs, zero remaining attempts, immutable queued subject/body.\n";
     echo "PASS: registration, failed/passed/last attempt, timeout completion, deduplication, disabled transport, provider acceptance/errors, no ambiguous retries, expiry. No real email or SMS sent.\n";
 } finally {
     $wpdb->query('ROLLBACK');

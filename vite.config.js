@@ -5,7 +5,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   root: '.',
-  base: '/tarhan/',
+  base: '/',
   server: {
     port: 3000,
   },
