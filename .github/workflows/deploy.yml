@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Build website
-        run: npm run build
+        run: npm run build:github
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -41,7 +41,7 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: dist-github
 
   deploy:
     environment:
