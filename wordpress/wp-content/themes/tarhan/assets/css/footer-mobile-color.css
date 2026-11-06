@@ -1,0 +1,6 @@
+@media (max-width: 576px) {
+    .footer,
+    .footer__container.container {
+        background-color: #5B452C;
+    }
+}

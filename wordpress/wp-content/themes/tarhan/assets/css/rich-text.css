@@ -1,0 +1,11 @@
+main strong, main b { font-weight: 700; }
+main em, main i { font-style: italic; }
+main s, main del { text-decoration: line-through; }
+main u { text-decoration: underline; }
+main mark { background: #fff2a8; color: inherit; }
+.tarhan-rich > p { margin: 0 0 .65em; }
+.tarhan-rich > p:last-child { margin-bottom: 0; }
+.tarhan-rich ul { list-style: disc; padding-left: 1.5em; }
+.tarhan-rich ol { list-style: decimal; padding-left: 1.5em; }
+.tarhan-rich a { text-decoration: underline; text-underline-offset: .15em; }
+.tarhan-rich blockquote { padding-left: 1em; border-left: 2px solid currentColor; }

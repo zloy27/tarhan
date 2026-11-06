@@ -12,7 +12,7 @@ add_action('wp_enqueue_scripts', function () {
     }
 });
 
-add_action('wp_footer', function () {
+add_action('wp_body_open', function () {
     ?>
     <section class="tarhan-cookies" id="tarhan-cookies" aria-labelledby="tarhan-cookies-title" hidden>
         <div class="tarhan-cookies__copy">
@@ -26,4 +26,4 @@ add_action('wp_footer', function () {
         </div>
     </section>
     <?php
-});
+}, 5);

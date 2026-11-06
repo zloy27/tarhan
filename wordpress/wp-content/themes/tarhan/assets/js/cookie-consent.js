@@ -16,7 +16,10 @@
     settings?.addEventListener('click', () => {
         banner.hidden = false;
         returnFocus = true;
-        banner.querySelector('button').focus();
+        if (window.matchMedia('(max-width: 700px)').matches) {
+            banner.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        }
+        banner.querySelector('button').focus({ preventScroll: true });
     });
     banner.querySelectorAll('[data-cookie-choice]').forEach(button => {
         button.addEventListener('click', () => {

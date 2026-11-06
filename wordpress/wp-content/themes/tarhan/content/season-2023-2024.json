@@ -19,16 +19,8 @@
     ],
     "watch": [
         {
-            "label": "YOUTUBE",
-            "url": "https://www.youtube.com/c/ДКдневник"
-        },
-        {
-            "label": "РУТУБ",
-            "url": "https://rutube.ru/channel/26853019/"
-        },
-        {
-            "label": "Видео сезона",
-            "url": "https://vkvideo.ru/video238817253_456239804"
+            "label": "ВК · 3-й сезон",
+            "url": "https://vk.ru/video/playlist/-214070047_3"
         }
     ],
     "gallery": [
@@ -227,6 +219,7 @@
     "source": "https://www.tarhan-history.ru/2023_2024/",
     "source_sha256": "618223e8cc28a80638cf42c7e65e5c7d5d1ad7ad76d80050eb2c9d1850a9e2b2",
     "watch_text": "Телеверсия конкурса выходила по воскресеньям на ТНВ.",
+    "gallery_url": "https://vk.ru/tarhan_konkurs?z=album-214070047_309805049",
     "unavailable_images": [
         "https://www.tarhan-history.ru/static/pages/img/tarhan/2023_2024_photos/10.jpeg"
     ]

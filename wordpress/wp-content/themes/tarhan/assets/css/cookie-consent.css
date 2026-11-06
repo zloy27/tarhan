@@ -38,6 +38,24 @@
 .tarhan-cookies :focus-visible, .tarhan-cookie-settings:focus-visible { outline: 2px solid #934c32; outline-offset: 4px; }
 .tarhan-cookie-settings { display: block; margin: 20px auto; background: none; border: 0; cursor: pointer; font: inherit; }
 @media (max-width: 700px) {
-    .tarhan-cookies { bottom: 12px; left: 12px; right: 12px; padding: 18px; flex-direction: column; align-items: stretch; gap: 16px; }
+    .tarhan-cookies {
+        position: relative;
+        z-index: auto;
+        inset: auto;
+        width: calc(100% - 24px);
+        max-width: none;
+        max-height: none;
+        margin: 12px auto;
+        padding: 16px;
+        overflow: visible;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        border-radius: 12px;
+        box-shadow: 0 5px 18px #00000012;
+    }
+    .tarhan-cookies h2 { font-size: 19px; }
+    .tarhan-cookies p { font-size: 14px; line-height: 1.45; }
+    .tarhan-cookies__actions { gap: 10px; }
     .tarhan-cookies__actions button { flex: 1; }
 }

@@ -71,10 +71,11 @@
 
     &__flyer {
         flex: 0 1 523px;
+        align-self: flex-start;
         width: min(100%, 523px);
         min-width: 0;
-        aspect-ratio: 523 / 534;
-        padding: 15px;
+        height: fit-content;
+        line-height: 0;
         // border-radius: 15px;
         // border: solid 1px var(--base-color-80);
         // background-color: var(--base-color-white);
@@ -83,8 +84,9 @@
     &__flyer-image {
         display: block;
         width: 100%;
-        height: 100%;
-        object-fit: contain;
+        height: auto;
+        object-fit: initial;
+        vertical-align: top;
         border: solid 0.33px var(--neutral-color-150);
     }
 

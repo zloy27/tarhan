@@ -1,13 +1,14 @@
 <?php
 /* Template Name: Архив сезонов */
 get_header();
+$archive_text = tarhan_page_content(get_queried_object_id());
 $seasons = get_posts(array('post_type' => 'page', 'post_status' => 'publish', 'posts_per_page' => -1,
     'meta_key' => '_wp_page_template', 'meta_value' => 'page-season.php', 'orderby' => array('menu_order' => 'ASC', 'post_title' => 'DESC')));
 ?>
 <main><section class="seasons"><div class="seasons__container container">
-    <p class="seasons__subtitle">История конкурса</p>
+    <div class="seasons__subtitle tarhan-rich"><?php echo tarhan_rich_render($archive_text['subtitle']); ?></div>
     <h1 class="seasons__title"><?php echo esc_html(get_the_title(get_queried_object_id())); ?></h1>
-    <p class="seasons__text">Участники, выпуски и памятные моменты</p>
+    <div class="seasons__text tarhan-rich"><?php echo tarhan_rich_render($archive_text['intro']); ?></div>
     <div class="seasons__cards">
     <?php foreach ($seasons as $season) : $data = tarhan_page_content($season->ID); ?>
         <article class="seasons__card tarhan-season-card"><a class="seasons__card--link" href="<?php echo esc_url(get_permalink($season)); ?>">

@@ -43,7 +43,7 @@
 
     &__p {
         margin-top: clamp(10px, 1vw, 14px);
-        font-size: clamp(15px, 1.2vw, 18px);
+        font-size: clamp(16px, 1.4vw, 24px);
         font-weight: 500;
         line-height: 1.4;
     }
@@ -157,7 +157,7 @@
         min-height: 0;
 
         > .competition-hero__container {
-            display: none;
+            display: block;
         }
 
         &__concurs {
@@ -167,6 +167,7 @@
         }
 
         &__banner {
+            order: -1;
             min-height: clamp(230px, 42vw, 340px);
         }
     }

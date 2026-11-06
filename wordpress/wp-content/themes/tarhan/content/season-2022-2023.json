@@ -6,16 +6,8 @@
     "stages": [],
     "watch": [
         {
-            "label": "YOUTUBE",
-            "url": "https://www.youtube.com/c/ДКдневник"
-        },
-        {
-            "label": "РУТУБ",
-            "url": "https://rutube.ru/channel/26853019/"
-        },
-        {
-            "label": "Видео сезона",
-            "url": "https://www.youtube.com/watch?v=DA35mJo1F6A"
+            "label": "ВК · 2-й сезон",
+            "url": "https://vk.ru/video/playlist/-214070047_2"
         }
     ],
     "gallery": [
@@ -281,6 +273,7 @@
     "source": "https://www.tarhan-history.ru/2022_2023/",
     "source_sha256": "3c29719cadebd9061f8bea16930285c52c495636da2603c680a65784c9043d27",
     "watch_text": "Телеверсия конкурса выходила по воскресеньям на ТНВ.",
+    "gallery_url": "https://vk.ru/tarhan_konkurs?z=album-214070047_309804854",
     "unavailable_images": [
         "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/9.jpg",
         "https://www.tarhan-history.ru/static/pages/img/tarhan/2022_2023_photos/11.jpg"

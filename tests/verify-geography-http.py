@@ -20,6 +20,7 @@ status, page = request('/registration/')
 assert status == 200
 config = json.loads(re.search(r'window.tarhanParticipant = (\{.*?\});', page.decode())[1])
 assert config['geographyEndpoint'].endswith('/geography/')
+season_id = re.search(r'name="season_id"\s+value="([^"]+)"', page.decode())[1]
 status, raw = request('/wp-json/tarhan/v1/geography/regions')
 assert status == 200 and len(json.loads(raw)['regions']) >= 80
 query = urllib.parse.urlencode({'region_id':'484048','query':'Казань'})
@@ -31,6 +32,7 @@ marker = uuid.uuid4().hex
 email = 'geo_http_' + marker + '@example.invalid'
 manifest.write_text(json.dumps({'marker':marker,'email':email}), encoding='utf-8')
 payload = {'address_mode':'directory','region_id':'484048','locality_id':'551487','street':'ул. Баумана','house':'12',
+ 'season_id':season_id,
  'first_name':'Иван','last_name':'Проверочный','middle_name':'Иванович','birth_date':'2000-01-01','phone':'+79991234567',
  'parent_first_name':'Пётр','parent_last_name':'Проверочный','parent_middle_name':'Петрович','parent_phone':'+79991234567','teacher_name':'Иванов Иван Иванович','teacher_phone':'+79991234567',
  'school_form':'МБОУ','school_type':'Школа','school_number':'12','education':'Абитуриент','email':email,

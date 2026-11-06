@@ -1,0 +1,32 @@
+/* Keep the full first-screen content available at every responsive breakpoint. */
+@media (max-width: 997px) {
+    .competition-hero > .competition-hero__container {
+        display: block;
+    }
+
+    .competition-hero__banner {
+        order: -1;
+    }
+}
+
+/* Let the flyer frame follow the dimensions of any image selected in WordPress. */
+.competition-prize__flyer {
+    align-self: flex-start;
+    aspect-ratio: auto;
+    height: fit-content;
+    padding: 0;
+    line-height: 0;
+}
+
+@media (max-width: 997px) {
+    .competition-prize__flyer {
+        align-self: center;
+    }
+}
+
+.competition-prize__flyer-image {
+    width: 100%;
+    height: auto;
+    object-fit: initial;
+    vertical-align: top;
+}

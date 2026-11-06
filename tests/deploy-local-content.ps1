@@ -15,8 +15,9 @@ $contentBackup = Join-Path 'C:/Users/zloy27/.codex/visualizations/2026/10/17/01a
 New-Item -ItemType Directory -Path $contentBackup | Out-Null
 Copy-Item -LiteralPath $contentTheme -Destination (Join-Path $contentBackup 'theme') -Recurse
 $contentFiles = @('functions.php','header.php','footer.php','front-page.php','page-jury.php','page-ambassadors.php','page-season.php','page-archive.php','page-preparation.php','page-information.php',
-    'inc/content-editor.php','inc/content-pages.php','template-parts/people.php','assets/js/content-editor.js','assets/css/content-editor.css','assets/css/content-pages.css',
-    'content/information.html','content/participant.html','content/season-2021-2022.json','content/ambassadors.json')
+    'inc/content-editor.php','inc/content-pages.php','inc/home-editor.php','template-parts/people.php',
+    'assets/js/content-editor.js','assets/js/home-editor.js','assets/css/content-editor.css','assets/css/content-pages.css','assets/css/home-editor.css','assets/css/home-responsive.css',
+    'content/information.html','content/participant.html','content/season-2021-2022.json','content/season-2022-2023.json','content/season-2023-2024.json','content/season-2024-2025.json','content/season-2025-2026.json','content/ambassadors.json')
 foreach ($relative in $contentFiles) {
     $destination = Join-Path $contentTheme $relative
     New-Item -ItemType Directory -Force -Path (Split-Path $destination -Parent) | Out-Null

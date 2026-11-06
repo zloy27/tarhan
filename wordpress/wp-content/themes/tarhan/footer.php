@@ -40,8 +40,7 @@
                         <li class="footer__contacts--title">Контакты</li>
                         <li class="footer__contacts--li"><a class="footer__link"
                                 href="mailto:tarhan.konkurs@gmail.com">tarhan.konkurs@gmail.com</a></li>
-                        <li class="footer__contacts--li"><a class="footer__link" href="tel:+79172661481">+7 (917)
-                                266-14-81</a></li>
+                        <li class="footer__contacts--li"><a class="footer__link" href="tel:+79033068381">+7 (903) 306-83-81</a></li>
                         <li class="footer__contacts--li">
                             <ul class="footer__socials">
                                 <li class="footer__socials--li"><a class="footer__link"

@@ -15,13 +15,13 @@ function tarhan_content_image($id, $class, $alt = '')
 
 function tarhan_content_paragraphs($text)
 {
-    if ($text !== '') { echo wpautop(esc_html($text)); }
+    if ($text !== '') { echo '<div class="tarhan-rich">' . wpautop(tarhan_rich_sanitize($text)) . '</div>'; }
 }
 
 function tarhan_render_migrated_html($name)
 {
     if (!in_array($name, array('information', 'participant'), true)) { return; }
-    $html = file_get_contents(get_theme_file_path('/content/' . $name . '.html'));
+    $html = tarhan_page_text_render(file_get_contents(get_theme_file_path('/content/' . $name . '.html')));
     $html = preg_replace_callback('/\b(href|src)="\.\/([^"<>]+)"/', function ($match) {
         $target = $match[2];
         if (str_starts_with($target, 'assets/') || str_starts_with($target, 'documents/')) {

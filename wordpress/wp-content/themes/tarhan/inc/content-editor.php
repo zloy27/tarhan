@@ -21,6 +21,10 @@ function tarhan_content_schema($kind)
         return array('fields' => array('subtitle' => array('Надзаголовок', 'text'), 'intro' => array('Вступление', 'textarea')),
             'groups' => array('people' => array('Люди на странице', 'Добавить человека', $person, 'name')));
     }
+    if ($kind === 'archive') {
+        return array('fields' => array('subtitle' => array('Надзаголовок', 'textarea'),
+            'intro' => array('Описание архива', 'textarea')), 'groups' => array());
+    }
     if ($kind !== 'season') { return array('fields' => array(), 'groups' => array()); }
     return array('fields' => array(
         'period' => array('Годы сезона, например 2021–2022', 'text'),
@@ -28,7 +32,8 @@ function tarhan_content_schema($kind)
         'process_before' => array('Как проходил конкурс — перед этапами', 'textarea'),
         'process_after' => array('Как проходил конкурс — после этапов', 'textarea'),
         'final_date' => array('Дата финала', 'date'), 'results_text' => array('Текст об итогах', 'textarea'),
-        'watch_text' => array('Где посмотреть — пояснение', 'textarea')),
+        'watch_text' => array('Где посмотреть — пояснение', 'textarea'),
+        'gallery_url' => array('Ссылка на полный фотоальбом сезона', 'url')),
         'groups' => array(
             'stats' => array('Цифры сезона', 'Добавить показатель', array('value' => array('Значение', 'text'), 'label' => array('Подпись', 'text')), 'value'),
             'stages' => array('Этапы конкурса', 'Добавить этап', array('label' => array('Название этапа', 'text')), 'label'),
@@ -53,7 +58,7 @@ function tarhan_content_value($value, $type)
         if (!preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', $value, $date)) { return ''; }
         return checkdate((int) $date[2], (int) $date[3], (int) $date[1]) ? $value : '';
     }
-    return $type === 'textarea' ? sanitize_textarea_field($value) : sanitize_text_field($value);
+    return $type === 'textarea' ? tarhan_rich_sanitize($value) : sanitize_text_field($value);
 }
 
 function tarhan_sanitize_page_content($raw, $kind)
@@ -78,6 +83,9 @@ function tarhan_page_content($post_id = null)
 {
     $post_id = $post_id ?: get_the_ID();
     $data = get_post_meta($post_id, '_tarhan_page_content', true);
+    if (tarhan_content_kind($post_id) === 'archive' && !is_array($data)) {
+        $data = array('subtitle' => 'История конкурса', 'intro' => 'Участники, выпуски и памятные моменты');
+    }
     return tarhan_sanitize_page_content($data, tarhan_content_kind($post_id));
 }
 
@@ -86,7 +94,7 @@ function tarhan_editor_field($name, $field, $value = '')
     $id = 'tarhan-' . preg_replace('/[^a-zA-Z0-9_-]/', '-', $name);
     echo '<div class="tarhan-field"><label for="' . esc_attr($id) . '">' . esc_html($field[0]) . '</label>';
     if ($field[1] === 'textarea') {
-        echo '<textarea id="' . esc_attr($id) . '" name="' . esc_attr($name) . '" rows="3">' . esc_textarea($value) . '</textarea>';
+        tarhan_rich_field($id, $name, $value);
     } elseif ($field[1] === 'image') {
         $url = $value ? wp_get_attachment_image_url((int) $value, 'thumbnail') : '';
         echo '<div class="tarhan-image"><input type="hidden" id="' . esc_attr($id) . '" name="' . esc_attr($name) . '" value="' . esc_attr($value) . '">';
@@ -139,7 +147,7 @@ function tarhan_save_page_content($post_id, $post)
     if (!current_user_can('edit_post', $post_id) || !isset($_POST['tarhan_content_nonce']) ||
         !is_string($_POST['tarhan_content_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['tarhan_content_nonce'])), 'tarhan_content_' . $post_id)) { return; }
     $kind = tarhan_content_kind($post);
-    if (!in_array($kind, array('jury', 'ambassadors', 'season'), true) || ($_POST['tarhan_content_kind'] ?? '') !== $kind) { return; }
+    if (!in_array($kind, array('jury', 'ambassadors', 'season', 'archive'), true) || ($_POST['tarhan_content_kind'] ?? '') !== $kind) { return; }
     if (($_POST['tarhan_content_complete'] ?? '') !== '1') {
         set_transient('tarhan_content_error_' . get_current_user_id(), 'Поля не сохранены: сервер обрезал большую форму. Предыдущие данные сохранены. Увеличьте max_input_vars и повторите сохранение.', 120);
         return;
@@ -150,11 +158,11 @@ function tarhan_save_page_content($post_id, $post)
 add_action('save_post_page', 'tarhan_save_page_content', 20, 2);
 
 add_filter('use_block_editor_for_post', function ($use, $post) {
-    return in_array(tarhan_content_kind($post), array('jury', 'ambassadors', 'season'), true) ? false : $use;
+    return in_array(tarhan_content_kind($post), array('jury', 'ambassadors', 'season', 'archive'), true) ? false : $use;
 }, 10, 2);
 
 add_action('add_meta_boxes_page', function ($post) {
-    if (in_array(tarhan_content_kind($post), array('jury', 'ambassadors', 'season'), true)) {
+    if (in_array(tarhan_content_kind($post), array('jury', 'ambassadors', 'season', 'archive'), true)) {
         remove_post_type_support('page', 'editor');
         add_meta_box('tarhan-page-content', 'Содержимое страницы «Тархан»', 'tarhan_content_metabox', 'page', 'normal', 'high');
     }
@@ -170,7 +178,7 @@ add_action('admin_enqueue_scripts', function () {
     $screen = get_current_screen();
     if (!$screen || $screen->base !== 'post' || $screen->post_type !== 'page') { return; }
     global $post;
-    if (!in_array(tarhan_content_kind($post), array('jury', 'ambassadors', 'season'), true)) { return; }
+    if (!in_array(tarhan_content_kind($post), array('jury', 'ambassadors', 'season', 'archive'), true)) { return; }
     wp_enqueue_media(array('post' => $post->ID));
     wp_enqueue_script('tarhan-content-editor', get_theme_file_uri('/assets/js/content-editor.js'), array('media-editor'), filemtime(get_theme_file_path('/assets/js/content-editor.js')), true);
     wp_enqueue_style('tarhan-content-editor', get_theme_file_uri('/assets/css/content-editor.css'), array(), filemtime(get_theme_file_path('/assets/css/content-editor.css')));

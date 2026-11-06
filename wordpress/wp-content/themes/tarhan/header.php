@@ -13,15 +13,15 @@
     <header class="header">
         <div class="container">
             <div class="header__container">
-                <ul class="header__logos">
+                <ul class="header__logos" aria-label="Организаторы конкурса">
                     <li class="header__logo"><img class="header__logo--tarhan" width="579" height="95"
-                            src="<?php echo esc_url(get_theme_file_uri('/dist/assets/tarhan-logo-new-BCOlHxkg.png')); ?>" alt="тарахан конкурс"></li>
+                            src="<?php echo esc_url(get_theme_file_uri('/dist/assets/tarhan-logo-new-BCOlHxkg.png')); ?>" alt="Историко-культурный конкурс «Тархан»"></li>
                     <li class="header__logo"><img class="header__logo--kfu" src="<?php echo esc_url(get_theme_file_uri('/dist/assets/kfu-logo-CtUFskgE.png')); ?>"
                             width="487" height="95" alt="Казанский федеральный университет"></li>
                     <li class="header__logo"><img class="header__logo--mincult" width="462" height="72"
-                            src="<?php echo esc_url(get_theme_file_uri('/dist/assets/minkult-logo-CA3nMIkK.png')); ?>" alt="минестерство культуры"></li>
+                            src="<?php echo esc_url(get_theme_file_uri('/dist/assets/minkult-logo-CA3nMIkK.png')); ?>" alt="Министерство культуры Республики Татарстан"></li>
                     <li class="header__logo"><img class="header__logo--alien" width="307" height="87"
-                            src="<?php echo esc_url(get_theme_file_uri('/dist/assets/alien-logo-DI15Txve.png')); ?>" alt="alien studio"></li>
+                            src="<?php echo esc_url(get_theme_file_uri('/dist/assets/alien-logo-DI15Txve.png')); ?>" alt="Alien Studio"></li>
                 </ul><button class="header__burger" type="button" aria-expanded="false"
                     aria-controls="header-navigation" aria-label="Открыть меню"><span></span> <span></span>
                     <span></span></button>

@@ -1,0 +1,9 @@
+.tarhan-home-admin { max-width: 1180px; }
+.tarhan-home-section { margin: 20px 0; padding: 18px 22px 22px; border: 1px solid #dcdcde; border-radius: 8px; background: #fff; }
+.tarhan-home-section h2 { margin-top: 0; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+.tarhan-home-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; }
+.tarhan-home-field label { display: block; margin-bottom: 6px; }
+.tarhan-home-field textarea { resize: vertical; }
+.tarhan-home-input { display: flex; gap: 8px; align-items: flex-start; }
+.tarhan-home-input .button { flex: 0 0 auto; }
+@media (max-width: 782px) { .tarhan-home-grid { grid-template-columns: 1fr; } .tarhan-home-input { flex-direction: column; } }

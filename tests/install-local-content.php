@@ -18,6 +18,7 @@ $specs = array(
     'archive/2022-2023' => array('Сезон 2022–2023', 'page-season.php', 'draft'),
     'archive/2023-2024' => array('Сезон 2023–2024', 'page-season.php', 'draft'),
     'archive/2024-2025' => array('Сезон 2024–2025', 'page-season.php', 'draft'),
+    'archive/2025-2026' => array('Сезон 2025–2026', 'page-season.php', 'draft'),
 );
 $before = array();
 foreach ($specs as $path => $spec) {
@@ -90,6 +91,12 @@ foreach (array('2022-2023', '2023-2024', '2024-2025') as $period) {
         update_post_meta($id, '_tarhan_page_content', array('period' => str_replace('-', '–', $period)));
         update_post_meta($id, '_tarhan_source_pending', '1');
     }
+}
+$fifth_id = $ids['archive/2025-2026'];
+if (!metadata_exists('post', $fifth_id, '_tarhan_page_content')) {
+    $data = json_decode(file_get_contents(get_theme_file_path('/content/season-2025-2026.json')), true, 512, JSON_THROW_ON_ERROR);
+    update_post_meta($fifth_id, '_tarhan_page_content', wp_slash(tarhan_sanitize_page_content($data, 'season')));
+    update_post_meta($fifth_id, '_tarhan_source_note', 'Годы и ссылка на записи подтверждены заказчиком. Остальные материалы сезона пока не предоставлены.');
 }
 flush_rewrite_rules(false);
 file_put_contents($backup_dir . '/page-ids.json', wp_json_encode($ids, JSON_PRETTY_PRINT));

@@ -1,7 +1,10 @@
 <?php
 
+require_once __DIR__ . '/inc/rich-text.php';
 require_once __DIR__ . '/inc/content-editor.php';
 require_once __DIR__ . '/inc/content-pages.php';
+require_once __DIR__ . '/inc/home-editor.php';
+require_once __DIR__ . '/inc/page-text-editor.php';
 
 function tarhan_enqueue_assets()
 {
@@ -54,6 +57,18 @@ function tarhan_enqueue_assets()
 }
 
 add_action('wp_enqueue_scripts', 'tarhan_enqueue_assets');
+
+function tarhan_enqueue_home_responsive_assets()
+{
+    if (!is_front_page()) { return; }
+    wp_enqueue_style(
+        'tarhan-home-responsive',
+        get_theme_file_uri('/assets/css/home-responsive.css'),
+        array('tarhan-theme'),
+        filemtime(get_theme_file_path('/assets/css/home-responsive.css'))
+    );
+}
+add_action('wp_enqueue_scripts', 'tarhan_enqueue_home_responsive_assets', 20);
 
 function tarhan_enqueue_test_assets()
 {
@@ -130,6 +145,12 @@ function tarhan_enqueue_footer_assets()
         get_theme_file_uri('/assets/css/footer.css'),
         array('tarhan-theme'),
         filemtime(get_theme_file_path('/assets/css/footer.css'))
+    );
+    wp_enqueue_style(
+        'tarhan-footer-mobile-color',
+        get_theme_file_uri('/assets/css/footer-mobile-color.css'),
+        array('tarhan-footer'),
+        filemtime(get_theme_file_path('/assets/css/footer-mobile-color.css'))
     );
 }
 add_action('wp_enqueue_scripts', 'tarhan_enqueue_footer_assets', 20);

@@ -3,7 +3,10 @@ define('DISABLE_WP_CRON', true);
 require 'C:/Users/zloy27/Local Sites/tarhan-wp/app/public/wp-load.php';
 function geo_check($condition, $message) { if (!$condition) { throw new RuntimeException($message); } }
 function geo_ok($result) { geo_check(!is_wp_error($result), is_wp_error($result) ? $result->get_error_code() : ''); return $result; }
-function geo_error($result, $code) { geo_check(is_wp_error($result) && $result->get_error_code() === $code, 'Expected error ' . $code); }
+function geo_error($result, $code) {
+    $actual = is_wp_error($result) ? $result->get_error_code() : get_debug_type($result);
+    geo_check(is_wp_error($result) && $actual === $code, 'Expected error ' . $code . ', got ' . $actual);
+}
 $passed = array();
 $index = geo_ok(tarhan_geography_regions());
 geo_check(count($index['regions']) >= 80, 'Missing region catalogue');
@@ -49,7 +52,9 @@ try {
     $block_remote = function () { throw new RuntimeException('Directory registration called an external service'); };
     add_filter('pre_http_request', $block_remote);
     delete_option('tarhan_dadata_key');
-    $p = array_merge($address, array('address_mode' => 'directory', 'first_name' => 'Иван', 'last_name' => 'Иванов', 'middle_name' => 'Иванович',
+    $season = tarhan_registration_season();
+    geo_check(is_array($season) && !empty($season['id']), 'Active registration season missing');
+    $p = array_merge($address, array('address_mode' => 'directory', 'season_id' => $season['id'], 'first_name' => 'Иван', 'last_name' => 'Иванов', 'middle_name' => 'Иванович',
         'birth_date' => '2000-01-01', 'phone' => '+79991234567', 'parent_first_name' => 'Пётр', 'parent_last_name' => 'Иванов',
         'parent_middle_name' => 'Петрович', 'parent_phone' => '+79991234567', 'teacher_name' => 'Иванов Иван Иванович', 'teacher_phone' => '+79991234567', 'school_form' => 'МБОУ', 'school_type' => 'Школа',
         'school_number' => '12', 'education' => 'Абитуриент', 'email' => 'geo_' . bin2hex(random_bytes(8)) . '@example.invalid',
@@ -63,7 +68,13 @@ try {
     $profile = get_user_meta($id, 'tarhan_profile', true);
     geo_check($profile['address']['locality'] === 'Казань' && $profile['address']['region'] === 'Республика Татарстан', 'Forged client labels trusted');
     geo_check(get_userdata($id)->roles === array('subscriber'), 'Forged role trusted');
-    $bad = array_merge($p, array('region_id' => '524925'));
+    $bad = array_merge($p, array(
+        'region_id' => '524925',
+        'email' => 'geo_bad_' . bin2hex(random_bytes(8)) . '@example.invalid',
+        'phone' => '+7998' . random_int(1000000, 9999999),
+    ));
+    wp_set_current_user(0);
+    $_SERVER['REMOTE_ADDR'] = 'geo_verify_bad_' . bin2hex(random_bytes(8));
     $request->set_body_params($bad);
     geo_error(tarhan_register_participant($request), 'geography_locality');
     $passed[] = 'Real account/profile without DaData or remote requests; labels and role server-controlled';

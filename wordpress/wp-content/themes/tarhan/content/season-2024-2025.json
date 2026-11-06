@@ -19,16 +19,8 @@
     ],
     "watch": [
         {
-            "label": "РУТУБ",
-            "url": "https://rutube.ru/plst/899969?r=wd"
-        },
-        {
-            "label": "ВК",
-            "url": "https://vkvideo.ru/playlist/-214070047_7"
-        },
-        {
-            "label": "Видео сезона",
-            "url": "https://vkvideo.ru/video-214070047_456239489"
+            "label": "ВК · 4-й сезон",
+            "url": "https://vk.ru/video/playlist/-214070047_7"
         }
     ],
     "gallery": [
@@ -228,5 +220,6 @@
     ],
     "source": "https://www.tarhan-history.ru/2024_2025/",
     "source_sha256": "b9c3a0bc906c32a30a61b1294cc3100f80947248c719f31d74c4c037323832b7",
-    "watch_text": "Телеверсия конкурса выходила по воскресеньям на ТНВ. Трансляции также проходили на UNIVER TV."
+    "watch_text": "Телеверсия конкурса выходила по воскресеньям на ТНВ. Трансляции также проходили на UNIVER TV.",
+    "gallery_url": "https://vk.ru/tarhan_konkurs?z=album-214070047_309805127"
 }
